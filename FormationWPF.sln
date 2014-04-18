@@ -9,6 +9,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataBinding", "DataBinding\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Collections", "Collections\Collections.csproj", "{E02CDB90-08E2-4429-9B6D-05E0FD9FCD38}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DependencyProperties", "DependencyProperties\DependencyProperties.csproj", "{6F3E62E8-8497-4D88-8F02-52FE1F1E2665}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NoWPF", "NoWPF\NoWPF.csproj", "{11181518-FFC9-43A4-A79C-889E6AE927C8}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -31,6 +35,14 @@ Global
 		{E02CDB90-08E2-4429-9B6D-05E0FD9FCD38}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E02CDB90-08E2-4429-9B6D-05E0FD9FCD38}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E02CDB90-08E2-4429-9B6D-05E0FD9FCD38}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6F3E62E8-8497-4D88-8F02-52FE1F1E2665}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6F3E62E8-8497-4D88-8F02-52FE1F1E2665}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6F3E62E8-8497-4D88-8F02-52FE1F1E2665}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6F3E62E8-8497-4D88-8F02-52FE1F1E2665}.Release|Any CPU.Build.0 = Release|Any CPU
+		{11181518-FFC9-43A4-A79C-889E6AE927C8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{11181518-FFC9-43A4-A79C-889E6AE927C8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{11181518-FFC9-43A4-A79C-889E6AE927C8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{11181518-FFC9-43A4-A79C-889E6AE927C8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
