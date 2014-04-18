@@ -1,0 +1,7 @@
+FormationWPF.sdf
+FormationWPF.suo
+FormationWPF.v11.suo
+bin/
+obj/
+*.opensdf
+packages/

@@ -1,0 +1,13 @@
+﻿<Window x:Class="Collections.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:local="clr-namespace:Collections"
+        xmlns:vm="clr-namespace:Collections.ViewModels"
+        Title="MainWindow" Height="350" Width="525">
+    <Window.Resources>
+        <vm:ComputersViewModel x:Key="ComputersViewModel"/>
+    </Window.Resources>
+    <Grid>
+        <local:ComputersView Model="{StaticResource ComputersViewModel}" />
+    </Grid>
+</Window>
