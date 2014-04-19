@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DependencyProperties", "Dep
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NoWPF", "NoWPF\NoWPF.csproj", "{11181518-FFC9-43A4-A79C-889E6AE927C8}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Xaml", "Xaml\Xaml.csproj", "{6243D140-E719-421E-9124-6B8DEF1AE493}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -43,6 +45,10 @@ Global
 		{11181518-FFC9-43A4-A79C-889E6AE927C8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{11181518-FFC9-43A4-A79C-889E6AE927C8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{11181518-FFC9-43A4-A79C-889E6AE927C8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6243D140-E719-421E-9124-6B8DEF1AE493}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6243D140-E719-421E-9124-6B8DEF1AE493}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6243D140-E719-421E-9124-6B8DEF1AE493}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6243D140-E719-421E-9124-6B8DEF1AE493}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

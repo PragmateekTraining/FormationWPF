@@ -1,0 +1,8 @@
+﻿<x:Array xmlns="clr-namespace:Xaml;assembly=Xaml"
+		 xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"			
+		 Type="Result">
+    <Result Value="{Calculator 1+1}" />
+    <Result Value="{Calculator 1-1}" />
+    <Result Value="{Calculator 1*1}" />
+    <Result Value="{Calculator 1/1}" />
+</x:Array>
