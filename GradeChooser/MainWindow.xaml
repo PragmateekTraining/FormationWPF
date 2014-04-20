@@ -1,0 +1,46 @@
+﻿<Window x:Class="GradeChooser.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:xctk="http://schemas.xceed.com/wpf/xaml/toolkit"
+        xmlns:local="clr-namespace:GradeChooser"
+        Title="MainWindow" Height="350" Width="525">
+    <Window.Resources>
+        <ControlTemplate x:Key="EditableTemplate"  TargetType="local:GradeChooserWidget">
+            <Border Background="Orange"
+								BorderBrush="Black"
+								BorderThickness="1"
+								CornerRadius="4"
+								Padding="2">
+                <Border.Effect>
+                    <DropShadowEffect ShadowDepth="2" />
+                </Border.Effect>
+                <StackPanel Orientation="Horizontal">
+                    <xctk:IntegerUpDown Value="{Binding Grade, RelativeSource={RelativeSource TemplatedParent}, Mode=TwoWay}" />
+                </StackPanel>
+            </Border>
+        </ControlTemplate>
+        <ControlTemplate x:Key="FiveStarsTemplate"  TargetType="local:GradeChooserWidget">
+            <Border Background="Orange"
+								BorderBrush="Black"
+								BorderThickness="1"
+								CornerRadius="4"
+								Padding="2">
+                <Border.Effect>
+                    <DropShadowEffect ShadowDepth="2" />
+                </Border.Effect>
+                <StackPanel Orientation="Horizontal">
+                    <local:Star Width="20" Height="20" Command="{TemplateBinding UpdateGrade}" CommandParameter="1" />
+                    <local:Star Width="20" Height="20" Command="{TemplateBinding UpdateGrade}" CommandParameter="2" />
+                    <local:Star Width="20" Height="20" Command="{TemplateBinding UpdateGrade}" CommandParameter="3" />
+                    <local:Star Width="20" Height="20" Command="{TemplateBinding UpdateGrade}" CommandParameter="4" />
+                    <local:Star Width="20" Height="20" Command="{TemplateBinding UpdateGrade}" CommandParameter="5" />
+                </StackPanel>
+            </Border>
+        </ControlTemplate>
+    </Window.Resources>
+    <StackPanel>
+        <local:GradeChooserWidget Grade="{Binding Grade,Mode=TwoWay}" />
+        <local:GradeChooserWidget Grade="{Binding Grade,Mode=TwoWay}" Template="{StaticResource EditableTemplate}" />
+        <local:GradeChooserWidget Grade="{Binding Grade,Mode=TwoWay}" Template="{StaticResource FiveStarsTemplate}" />
+    </StackPanel>
+</Window>

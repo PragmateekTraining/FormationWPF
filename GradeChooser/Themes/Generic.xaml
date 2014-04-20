@@ -1,0 +1,25 @@
+﻿<ResourceDictionary
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="clr-namespace:GradeChooser">
+    <Style TargetType="local:GradeChooserWidget">
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="local:GradeChooserWidget">
+                    <Border Background="Orange"
+								BorderBrush="Black"
+								BorderThickness="1"
+								CornerRadius="4"
+								Padding="2">
+                        <Border.Effect>
+                            <DropShadowEffect ShadowDepth="2" />
+                        </Border.Effect>
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock Text="{Binding Grade, RelativeSource={RelativeSource TemplatedParent}}" />
+                        </StackPanel>
+                    </Border>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+</ResourceDictionary>
