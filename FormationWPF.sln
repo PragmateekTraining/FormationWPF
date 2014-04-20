@@ -17,6 +17,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Xaml", "Xaml\Xaml.csproj", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GradeChooser", "GradeChooser\GradeChooser.csproj", "{90993D9C-5BAC-4F17-B599-F46B035698EB}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SearchForm", "SearchForm\SearchForm.csproj", "{FE0C0849-6D4F-478B-B986-1CED68E9BE16}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -55,6 +57,10 @@ Global
 		{90993D9C-5BAC-4F17-B599-F46B035698EB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{90993D9C-5BAC-4F17-B599-F46B035698EB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{90993D9C-5BAC-4F17-B599-F46B035698EB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FE0C0849-6D4F-478B-B986-1CED68E9BE16}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FE0C0849-6D4F-478B-B986-1CED68E9BE16}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FE0C0849-6D4F-478B-B986-1CED68E9BE16}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FE0C0849-6D4F-478B-B986-1CED68E9BE16}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
