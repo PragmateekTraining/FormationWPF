@@ -29,11 +29,14 @@
                     <DropShadowEffect ShadowDepth="2" />
                 </Border.Effect>
                 <StackPanel Orientation="Horizontal">
-                    <local:Star Width="20" Height="20" Command="{TemplateBinding UpdateGrade}" CommandParameter="1" />
-                    <local:Star Width="20" Height="20" Command="{TemplateBinding UpdateGrade}" CommandParameter="2" />
-                    <local:Star Width="20" Height="20" Command="{TemplateBinding UpdateGrade}" CommandParameter="3" />
-                    <local:Star Width="20" Height="20" Command="{TemplateBinding UpdateGrade}" CommandParameter="4" />
-                    <local:Star Width="20" Height="20" Command="{TemplateBinding UpdateGrade}" CommandParameter="5" />
+                    <StackPanel.Resources>
+                        <local:IsGreaterOrEqualConverter x:Key="isGreaterOrEqualConverter" />
+                    </StackPanel.Resources>
+                    <local:Star Width="20" Height="20" Command="{TemplateBinding UpdateGrade}" CommandParameter="1" IsChecked="{TemplateBinding Grade,Converter={StaticResource isGreaterOrEqualConverter},ConverterParameter=1}" />
+                    <local:Star Width="20" Height="20" Command="{TemplateBinding UpdateGrade}" CommandParameter="2" IsChecked="{TemplateBinding Grade,Converter={StaticResource isGreaterOrEqualConverter},ConverterParameter=2}" />
+                    <local:Star Width="20" Height="20" Command="{TemplateBinding UpdateGrade}" CommandParameter="3" IsChecked="{TemplateBinding Grade,Converter={StaticResource isGreaterOrEqualConverter},ConverterParameter=3}" />
+                    <local:Star Width="20" Height="20" Command="{TemplateBinding UpdateGrade}" CommandParameter="4" IsChecked="{TemplateBinding Grade,Converter={StaticResource isGreaterOrEqualConverter},ConverterParameter=4}" />
+                    <local:Star Width="20" Height="20" Command="{TemplateBinding UpdateGrade}" CommandParameter="5" IsChecked="{TemplateBinding Grade,Converter={StaticResource isGreaterOrEqualConverter},ConverterParameter=5}" />
                 </StackPanel>
             </Border>
         </ControlTemplate>
