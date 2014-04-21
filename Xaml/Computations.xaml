@@ -5,4 +5,7 @@
     <Result Value="{Calculator 1-1}" />
     <Result Value="{Calculator 1*1}" />
     <Result Value="{Calculator 1/1}" />
+    <Result Value="{Random Min=-10,Max=+10}" />
+    <Result Value="{Random -10,+10}" />
+    <Result Value="{Random -10,Max=+10}" />
 </x:Array>
