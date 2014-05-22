@@ -17,28 +17,33 @@ namespace ConsoleChessGame
             this.engine = engine;
         }
 
-        public void Run()
+        public void Run(bool autoPlay = false)
         {
             while (true)
             {
-                Console.WriteLine("Your move? ");
-
-                string moveString = Console.ReadLine();
-
-                if (moveString == "")
+                if (!autoPlay)
                 {
-                    continue;
+                    Console.WriteLine("Your move? ");
+
+                    string moveString = Console.ReadLine();
+
+                    if (moveString == "")
+                    {
+                        continue;
+                    }
+
+                    Move move = Move.Parse(moveString);
+
+                    engine.Execute(move);
                 }
 
-                Move move = Move.Parse(moveString);
-
-                engine.Execute(move);
-
-                Move AIMove = engine.GetNextBestMove();
+                Move AIMove = engine.GetBestMove();
 
                 engine.Execute(AIMove);
 
                 Console.WriteLine("My move: {0}", AIMove);
+
+                Console.ReadLine();
             }
         }
     }

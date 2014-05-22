@@ -26,6 +26,8 @@ namespace Chess.Model
 
         public bool IsBlack { get; set; }
 
+        public Piece CurrentPiece { get; set; }
+
         public override string ToString()
         {
             return Column.ToString().ToLower() + Row;

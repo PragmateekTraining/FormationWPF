@@ -1,12 +1,10 @@
 ﻿using Chess.Model;
 using System;
-using System.Collections.Generic;
 using System.Diagnostics;
 using System.IO;
 using System.Linq;
-using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading;
-using System.Threading.Tasks;
 
 namespace Chess.Engine
 {
@@ -16,6 +14,9 @@ namespace Chess.Engine
         private Process engineExeProcess = null;
 
         private Game currentGame = null;
+
+        private const string bestMoveResponsePattern = "bestmove ((?:[a-h][1-8]){2}|NULL)(?: ponder (?:(?:[a-h][1-8]){2}|0000))?";
+        private static readonly Regex bestMoveResponseRegex = new Regex(bestMoveResponsePattern);
 
         public UCIEngine(string engineExePath)
         {
@@ -73,27 +74,65 @@ namespace Chess.Engine
             currentGame = new Game();
         }
 
-        public Move GetNextBestMove()
+        public Move GetBestMove()
         {
             CheckStatus();
 
             string movesString = string.Join(" ", currentGame.Moves.Select(m => m.ToString()));
 
-            return null;
+            SendCommand("position startpos moves " + movesString);
+            SendCommand("go depth 10");
+
+            string response = "";
+
+            while (!response.StartsWith("bestmove "))
+            {
+                response = engineExeProcess.StandardOutput.ReadLine();
+            }
+
+            Match match = bestMoveResponseRegex.Match(response);
+
+            string bestMoveString = match.Groups[1].Value;
+
+            // = group.Captures[0].Value + group.Captures[1].Value;
+
+            Move bestMove = bestMoveString != "NULL" ? Move.Parse(bestMoveString) : null;
+
+            return bestMove;
         }
+
+        private void UpdateMatedStatus()
+        {
+            Move bestMove = GetBestMove();
+
+            if (bestMove == null)
+            {
+                AreWhitesMated = currentGame.Moves.Count % 2 == 0;
+                AreBlacksMated = !AreWhitesMated;
+            }
+        }
+
+        public bool AreWhitesMated { get; private set; }
+
+        public bool AreBlacksMated { get; private set; }
 
         public void Execute(Move move)
         {
             currentGame.Execute(move);
+
+            UpdateMatedStatus();
         }
 
         public void Stop()
         {
-            CheckStatus();
+            if (IsRunning())
+            {
+                CheckStatus();
 
-            SendCommand("quit");
+                SendCommand("quit");
 
-            engineExeProcess.WaitForExit(Timeout.Infinite);
+                engineExeProcess.WaitForExit(Timeout.Infinite);
+            }
         }
 
         public bool IsRunning()
@@ -103,7 +142,7 @@ namespace Chess.Engine
 
         public void Dispose()
         {
-            throw new NotImplementedException();
+            Stop();
         }
     }
 }

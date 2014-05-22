@@ -17,7 +17,10 @@ namespace Chess.Engine
         void StartNewGame();
 
         void Execute(Move move);
-        Move GetNextBestMove();
+        Move GetBestMove();
+
+        bool AreWhitesMated { get; }
+        bool AreBlacksMated { get; }
 
         void CheckStatus();
     }
