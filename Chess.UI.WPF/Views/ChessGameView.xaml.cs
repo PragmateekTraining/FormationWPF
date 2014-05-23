@@ -1,5 +1,4 @@
-﻿using Chess.Model;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -17,15 +16,15 @@ using System.Windows.Shapes;
 namespace Chess.UI.WPF
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Interaction logic for ChessGameView.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class ChessGameView : UserControl
     {
-        public MainWindow()
+        public ChessGameView(ChessGameViewModel model)
         {
             InitializeComponent();
 
-            grid.Children.Add(new ChessGameView(new ChessGameViewModel { Game = new Game() }));
+            grid.Children.Add(new BoardView(new BoardViewModel { Board = model.Game.Board }));
         }
     }
 }

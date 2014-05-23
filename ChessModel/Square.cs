@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -19,14 +20,31 @@ namespace Chess.Model
         H
     }
 
-    public class Square
+    public class Square : INotifyPropertyChanged
     {
+        public event PropertyChangedEventHandler PropertyChanged = delegate { };
+
         public Column Column { get; set; }
         public int Row { get; set; }
 
         public bool IsBlack { get; set; }
 
-        public Piece CurrentPiece { get; set; }
+        private Piece currentPiece = null;
+        public Piece CurrentPiece
+        {
+            get
+            {
+                return currentPiece;
+            }
+            set
+            {
+                if (value != currentPiece)
+                {
+                    currentPiece = value;
+                    PropertyChanged(this, new PropertyChangedEventArgs("CurrentPiece"));
+                }
+            }
+        }
 
         public override string ToString()
         {

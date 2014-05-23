@@ -55,13 +55,13 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\ChessEngine\ChessEngine.csproj">
+    <ProjectReference Include="..\ChessEngine\Chess.Engine.csproj">
       <Project>{803e723a-fca8-410c-8d89-649a096288cd}</Project>
-      <Name>ChessEngine</Name>
+      <Name>Chess.Engine</Name>
     </ProjectReference>
-    <ProjectReference Include="..\ChessModel\ChessModel.csproj">
+    <ProjectReference Include="..\ChessModel\Chess.Model.csproj">
       <Project>{3b940fc5-9eaa-4990-ae22-ba0dcb0b204c}</Project>
-      <Name>ChessModel</Name>
+      <Name>Chess.Model</Name>
     </ProjectReference>
   </ItemGroup>
   <Choose>

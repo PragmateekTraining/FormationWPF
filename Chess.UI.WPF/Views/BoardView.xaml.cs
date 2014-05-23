@@ -20,9 +20,17 @@ namespace Chess.UI.WPF
     /// </summary>
     public partial class BoardView : UserControl
     {
-        public BoardView()
+        public BoardView(BoardViewModel model)
         {
             InitializeComponent();
+
+            for (int iRow = 7; iRow >= 0; --iRow)
+            {
+                for (int iCol = 0; iCol < 8; ++iCol)
+                {
+                    grid.Children.Add(new SquareView(new SquareViewModel { Square = model.Board.Squares[iCol, iRow] }));
+                }
+            }
         }
     }
 }

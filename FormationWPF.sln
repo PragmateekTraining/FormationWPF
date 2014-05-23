@@ -21,11 +21,11 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SearchForm", "SearchForm\Se
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Chess", "Chess", "{C0A64DA4-3D16-43D3-8EC0-5890D0DE2FB7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChessEngine", "ChessEngine\ChessEngine.csproj", "{803E723A-FCA8-410C-8D89-649A096288CD}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Chess.Engine", "ChessEngine\Chess.Engine.csproj", "{803E723A-FCA8-410C-8D89-649A096288CD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChessModel", "ChessModel\ChessModel.csproj", "{3B940FC5-9EAA-4990-AE22-BA0DCB0B204C}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Chess.Model", "ChessModel\Chess.Model.csproj", "{3B940FC5-9EAA-4990-AE22-BA0DCB0B204C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChessUIConsole", "ConsoleChessGame\ChessUIConsole.csproj", "{DAD62D6D-C222-4630-9379-3DC2AD5F61D9}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Chess.UI.Console", "ConsoleChessGame\Chess.UI.Console.csproj", "{DAD62D6D-C222-4630-9379-3DC2AD5F61D9}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Chess.Tests", "Chess.Tests\Chess.Tests.csproj", "{AF6EC9F7-5DBB-44E9-A591-9AC584617907}"
 EndProject
