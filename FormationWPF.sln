@@ -31,6 +31,18 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Chess.Tests", "Chess.Tests\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Chess.UI.WPF", "Chess.UI.WPF\Chess.UI.WPF.csproj", "{B8DBE82D-5A42-4A7F-A46E-86C9CBAA326E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Visibility", "Visibility\Visibility.csproj", "{4D98A961-4C32-45F5-90B2-6CDB277957A4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HorizontalAlignment", "Alignment\HorizontalAlignment.csproj", "{71EC7311-5EFA-4602-81B9-D36A4A85E834}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VerticalAlignment", "VerticalAlignment\VerticalAlignment.csproj", "{77BB1638-F0B1-47A4-B206-D82677BC94A9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Transforms", "Transforms\Transforms.csproj", "{12C3F393-AC34-4A54-B6F8-5E61E3EDFF52}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WindowsAndMessageBoxes", "WindowsAndMessageBoxes\WindowsAndMessageBoxes.csproj", "{3A566697-F1CE-4602-973B-677F597D5E19}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WindowsAndMessagesBoxesFromScratch", "WindowsAndMessagesBoxesFromScratch\WindowsAndMessagesBoxesFromScratch.csproj", "{A08560F5-301F-4986-AF60-A4D879003E79}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -93,6 +105,30 @@ Global
 		{B8DBE82D-5A42-4A7F-A46E-86C9CBAA326E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B8DBE82D-5A42-4A7F-A46E-86C9CBAA326E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B8DBE82D-5A42-4A7F-A46E-86C9CBAA326E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4D98A961-4C32-45F5-90B2-6CDB277957A4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4D98A961-4C32-45F5-90B2-6CDB277957A4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4D98A961-4C32-45F5-90B2-6CDB277957A4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4D98A961-4C32-45F5-90B2-6CDB277957A4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{71EC7311-5EFA-4602-81B9-D36A4A85E834}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{71EC7311-5EFA-4602-81B9-D36A4A85E834}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{71EC7311-5EFA-4602-81B9-D36A4A85E834}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{71EC7311-5EFA-4602-81B9-D36A4A85E834}.Release|Any CPU.Build.0 = Release|Any CPU
+		{77BB1638-F0B1-47A4-B206-D82677BC94A9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{77BB1638-F0B1-47A4-B206-D82677BC94A9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{77BB1638-F0B1-47A4-B206-D82677BC94A9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{77BB1638-F0B1-47A4-B206-D82677BC94A9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{12C3F393-AC34-4A54-B6F8-5E61E3EDFF52}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{12C3F393-AC34-4A54-B6F8-5E61E3EDFF52}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{12C3F393-AC34-4A54-B6F8-5E61E3EDFF52}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{12C3F393-AC34-4A54-B6F8-5E61E3EDFF52}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3A566697-F1CE-4602-973B-677F597D5E19}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3A566697-F1CE-4602-973B-677F597D5E19}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3A566697-F1CE-4602-973B-677F597D5E19}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3A566697-F1CE-4602-973B-677F597D5E19}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A08560F5-301F-4986-AF60-A4D879003E79}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A08560F5-301F-4986-AF60-A4D879003E79}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A08560F5-301F-4986-AF60-A4D879003E79}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A08560F5-301F-4986-AF60-A4D879003E79}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

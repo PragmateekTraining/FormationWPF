@@ -1,0 +1,27 @@
+﻿<Window x:Class="Visibility.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="MainWindow" Height="350" Width="525">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <StackPanel Grid.Column="0">
+            <TextBlock>Top text</TextBlock>
+            <TextBlock Visibility="Visible">Middle text</TextBlock>
+            <TextBlock>Bottom text</TextBlock>
+        </StackPanel>
+        <StackPanel Grid.Column="1">
+            <TextBlock>Top text</TextBlock>
+            <TextBlock Visibility="Hidden">Middle text</TextBlock>
+            <TextBlock>Bottom text</TextBlock>
+        </StackPanel>
+        <StackPanel Grid.Column="2">
+            <TextBlock>Top text</TextBlock>
+            <TextBlock Visibility="Collapsed">Middle text</TextBlock>
+            <TextBlock>Bottom text</TextBlock>
+        </StackPanel>
+    </Grid>
+</Window>

@@ -1,0 +1,32 @@
+﻿<Window x:Class="Alignment.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="MainWindow" Height="350" Width="525">
+    <Window.Resources>
+        <Style TargetType="Border">
+            <Setter Property="BorderBrush" Value="Red" />
+            <Setter Property="Background" Value="LemonChiffon" />
+            <Setter Property="BorderThickness" Value="1" />
+        </Style>
+    </Window.Resources>
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Border Grid.Column="0" VerticalAlignment="Top">
+            <TextBlock>Top</TextBlock>
+        </Border>
+        <Border Grid.Column="1" VerticalAlignment="Bottom">
+            <TextBlock>Bottom</TextBlock>
+        </Border>
+        <Border Grid.Column="2" VerticalAlignment="Center">
+            <TextBlock>Center</TextBlock>
+        </Border>
+        <Border Grid.Column="3" VerticalAlignment="Stretch">
+            <TextBlock>Stretch</TextBlock>
+        </Border>
+    </Grid>
+</Window>

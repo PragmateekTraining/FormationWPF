@@ -1,0 +1,36 @@
+﻿<Window x:Class="Transforms.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="MainWindow"
+        SizeToContent="WidthAndHeight">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <StackPanel Grid.Column="0">
+            <TextBlock Text="Before rotated text"></TextBlock>
+            <TextBlock Text="Some text rotated with a layout transform">
+                <TextBlock.LayoutTransform>
+                    <RotateTransform Angle="10"></RotateTransform>
+                </TextBlock.LayoutTransform>
+            </TextBlock>
+            <TextBlock Text="After rotated text"></TextBlock>
+        </StackPanel>
+        <StackPanel Grid.Column="1">
+            <!--<Border Background="Red" Height="50"></Border>-->
+            <TextBlock Text="Before rotated text"></TextBlock>
+            <!--<Border Background="Green" Height="50">
+                <Border.LayoutTransform>
+                    <RotateTransform Angle="10"></RotateTransform>
+                </Border.LayoutTransform>
+            </Border>-->
+            <TextBlock Text="Some text rotated with a render transform">
+                <TextBlock.RenderTransform>
+                    <RotateTransform Angle="10"></RotateTransform>
+                </TextBlock.RenderTransform>
+            </TextBlock>
+            <TextBlock Text="After rotated text"></TextBlock>
+        </StackPanel>
+    </Grid>
+</Window>
