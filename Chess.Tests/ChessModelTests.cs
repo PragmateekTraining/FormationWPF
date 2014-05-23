@@ -28,5 +28,29 @@ namespace Chess.Tests
 
             Assert.AreEqual(inMoveString, outMoveString);
         }
+
+        [TestMethod]
+        public void CanParseAFENString()
+        {
+            Board board = Board.Parse("k7/8/8/4Q3/4q3/8/8/7K");
+
+            Assert.AreEqual(Piece.BlackKing, board[Column.A, 8].CurrentPiece);
+            Assert.AreEqual(Piece.WhiteKing, board[Column.H, 1].CurrentPiece);
+            Assert.AreEqual(Piece.BlackQueen, board[Column.E, 4].CurrentPiece);
+            Assert.AreEqual(Piece.WhiteQueen, board[Column.E, 5].CurrentPiece);
+
+            board[Column.A, 8].CurrentPiece = null;
+            board[Column.H, 1].CurrentPiece = null;
+            board[Column.E, 4].CurrentPiece = null;
+            board[Column.E, 5].CurrentPiece = null;
+
+            for (int iRow = 0; iRow < 8; ++iRow)
+            {
+                for (int iCol = 0; iCol < 8; ++iCol)
+                {
+                    Assert.IsNull(board[(Column)(iCol + 1), iRow + 1].CurrentPiece);
+                }
+            }
+        }
     }
 }

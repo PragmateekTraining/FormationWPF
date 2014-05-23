@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Chess.Model;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -24,11 +25,11 @@ namespace Chess.UI.WPF
         {
             InitializeComponent();
 
-            for (int iRow = 7; iRow >= 0; --iRow)
+            for (int iRow = 8; iRow >= 1; --iRow)
             {
-                for (int iCol = 0; iCol < 8; ++iCol)
+                for (int iCol = 1; iCol <= 8; ++iCol)
                 {
-                    grid.Children.Add(new SquareView(new SquareViewModel { Square = model.Board.Squares[iCol, iRow] }));
+                    grid.Children.Add(new SquareView(new SquareViewModel { Square = model.Board[(Column)iCol, iRow] }));
                 }
             }
         }

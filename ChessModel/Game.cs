@@ -21,8 +21,8 @@ namespace Chess.Model
         {
             Moves.Add(move);
 
-            Square fromSquare = Board.Squares[(int)(move.From.Column - 1), move.From.Row - 1];
-            Square toSquare = Board.Squares[(int)(move.To.Column - 1), move.To.Row - 1];
+            Square fromSquare = Board[move.From.Column, move.From.Row];
+            Square toSquare = Board[move.To.Column, move.To.Row];
 
             Piece piece = fromSquare.CurrentPiece;
             fromSquare.CurrentPiece = null;
