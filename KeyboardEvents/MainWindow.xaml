@@ -1,0 +1,17 @@
+﻿<Window x:Class="KeyboardEvents.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="MainWindow" Height="350" Width="525" KeyDown="StackPanel_KeyDown_1" KeyUp="StackPanel_KeyUp_1">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+        <StackPanel Orientation="Horizontal">
+            <TextBlock Focusable="True" x:Name="altTextBlock" Text="ALT " />
+            <TextBlock Focusable="True" x:Name="ctrlTextBlock" Text="CTRL " />
+            <TextBlock Focusable="True" x:Name="shiftTextBlock" Text="MAJ " />
+        </StackPanel>
+        <WrapPanel x:Name="keysPanel" Grid.Row="1"></WrapPanel>
+    </Grid>
+</Window>

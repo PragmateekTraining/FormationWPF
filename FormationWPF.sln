@@ -47,6 +47,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProtectedTextBox", "Protect
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AttachedEvents", "AttachedEvents\AttachedEvents.csproj", "{9104B5CE-1E02-45B8-9957-05C33BA77A6A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KeyboardEvents", "KeyboardEvents\KeyboardEvents.csproj", "{1087C9EF-DB20-44C6-81F5-79298B2D440A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -141,6 +143,10 @@ Global
 		{9104B5CE-1E02-45B8-9957-05C33BA77A6A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9104B5CE-1E02-45B8-9957-05C33BA77A6A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9104B5CE-1E02-45B8-9957-05C33BA77A6A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1087C9EF-DB20-44C6-81F5-79298B2D440A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1087C9EF-DB20-44C6-81F5-79298B2D440A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1087C9EF-DB20-44C6-81F5-79298B2D440A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1087C9EF-DB20-44C6-81F5-79298B2D440A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
