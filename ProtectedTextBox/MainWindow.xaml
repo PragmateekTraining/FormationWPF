@@ -1,0 +1,14 @@
+﻿<Window x:Class="ProtectedTextBox.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="MainWindow"
+        SizeToContent="WidthAndHeight">
+    <Grid>
+        <StackPanel>
+            <TextBox x:Name="input1" KeyDown="TextBox_KeyDown_1" />
+            <Grid PreviewKeyDown="Grid_PreviewKeyDown_1">
+            <TextBox x:Name="input2" />
+            </Grid>
+        </StackPanel>
+    </Grid>
+</Window>

@@ -8,8 +8,25 @@ using System.Windows;
 
 namespace WindowsAndMessagesBoxesFromScratch
 {
-    class Program
+    class SomeComponent
     {
+    }
+
+    class Program : UIElement
+    {
+        public static readonly RoutedEvent SomethingHappenedEvent = EventManager.RegisterRoutedEvent("SomethingHappened", RoutingStrategy.Bubble, typeof(RoutedEventHandler), typeof(SomeComponent));
+
+        public event RoutedEventHandler SomethingHappened
+        {
+            add { AddHandler(SomethingHappenedEvent, value); }
+            remove { RemoveHandler(SomethingHappenedEvent, value); }
+        }
+
+        void DoSomething()
+        {
+            RaiseEvent(new RoutedEventArgs(SomethingHappenedEvent, this));
+        }
+
         [STAThread]
         static void Main(string[] args)
         {

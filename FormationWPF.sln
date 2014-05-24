@@ -43,6 +43,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WindowsAndMessageBoxes", "W
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WindowsAndMessagesBoxesFromScratch", "WindowsAndMessagesBoxesFromScratch\WindowsAndMessagesBoxesFromScratch.csproj", "{A08560F5-301F-4986-AF60-A4D879003E79}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProtectedTextBox", "ProtectedTextBox\ProtectedTextBox.csproj", "{75F01488-5515-4908-AE2A-2DC85752834B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AttachedEvents", "AttachedEvents\AttachedEvents.csproj", "{9104B5CE-1E02-45B8-9957-05C33BA77A6A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -129,6 +133,14 @@ Global
 		{A08560F5-301F-4986-AF60-A4D879003E79}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A08560F5-301F-4986-AF60-A4D879003E79}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A08560F5-301F-4986-AF60-A4D879003E79}.Release|Any CPU.Build.0 = Release|Any CPU
+		{75F01488-5515-4908-AE2A-2DC85752834B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{75F01488-5515-4908-AE2A-2DC85752834B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{75F01488-5515-4908-AE2A-2DC85752834B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{75F01488-5515-4908-AE2A-2DC85752834B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9104B5CE-1E02-45B8-9957-05C33BA77A6A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9104B5CE-1E02-45B8-9957-05C33BA77A6A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9104B5CE-1E02-45B8-9957-05C33BA77A6A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9104B5CE-1E02-45B8-9957-05C33BA77A6A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
