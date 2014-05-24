@@ -1,0 +1,30 @@
+﻿<Window x:Class="MouseEvents.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="MainWindow" Height="350" Width="525" MouseMove="Window_MouseMove_1">
+    <Grid>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"></RowDefinition>
+                <RowDefinition Height="Auto"></RowDefinition>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"></ColumnDefinition>
+                <ColumnDefinition Width="Auto"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Label Target="{x:Reference Name=absolutePosition}">Absolute position : </Label>
+            <TextBlock x:Name="absolutePosition" Grid.Column="1"></TextBlock>
+            <Label Target="{x:Reference Name=relativePosition}" Grid.Row="1">Relative position :</Label>
+            <TextBlock x:Name="relativePosition" Grid.Row="1" Grid.Column="1"></TextBlock>
+        </Grid>
+        <Border x:Name="rectangle"
+                Width="200"
+                Height="100"
+                Background="AliceBlue"
+                BorderThickness="2"
+                MouseDown="rectangle_MouseDown_1"
+                MouseUp="rectangle_MouseUp_1">
+            <TextBlock VerticalAlignment="Center" HorizontalAlignment="Center">Hello</TextBlock>
+        </Border>
+    </Grid>
+</Window>
