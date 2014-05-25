@@ -3,8 +3,8 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         Title="MainWindow" Height="350" Width="525">
     <DockPanel>
-        <!--<ToolBar>-->
-        <Button Command="{x:Static ApplicationCommands.Copy}" DockPanel.Dock="Bottom" Content="Copy" CommandTarget="{x:Reference input}" />
+        <!--<ToolBar>  CommandTarget="{x:Reference input}"-->
+        <Button Command="{x:Static ApplicationCommands.Copy}" DockPanel.Dock="Bottom" FocusManager.IsFocusScope="True" Content="Copy" />
        <!--</ToolBar>-->
         <TextBox x:Name="input"></TextBox>
     </DockPanel>

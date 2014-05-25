@@ -1,0 +1,17 @@
+﻿<Page x:Class="Navigation.DataBinding"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      mc:Ignorable="d" 
+      d:DesignHeight="300" d:DesignWidth="300"
+	Title="Data binding">
+    <StackPanel>
+        <TextBox x:Name="input"></TextBox>
+        <TextBlock Text="{Binding Text,ElementName=input,UpdateSourceTrigger=PropertyChanged}"></TextBlock>
+        <DockPanel LastChildFill="False">
+            <TextBlock DockPanel.Dock="Left"><Hyperlink NavigateUri="Intro.xaml">Intro</Hyperlink></TextBlock>
+            <TextBlock DockPanel.Dock="Right"><Hyperlink NavigateUri="Shapes.xaml">Shapes</Hyperlink></TextBlock>
+        </DockPanel>
+    </StackPanel>
+</Page>
