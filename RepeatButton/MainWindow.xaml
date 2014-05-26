@@ -1,0 +1,11 @@
+﻿<Window x:Class="RepeatButton.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="MainWindow"
+        SizeToContent="WidthAndHeight">
+    <StackPanel Orientation="Horizontal">
+        <RepeatButton x:Name="lessButton" Click="lessButton_Click">&lt;</RepeatButton>
+        <TextBlock x:Name="valueBox" Margin="5">0</TextBlock>
+        <RepeatButton x:Name="moreButton" Delay="1000" Interval="1" Click="moreButton_Click">></RepeatButton>
+    </StackPanel>
+</Window>
