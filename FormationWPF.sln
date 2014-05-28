@@ -75,6 +75,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DisplayMemberPath", "Displa
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Scrolling", "Scrolling\Scrolling.csproj", "{3496D2D7-9236-4894-A74F-BE5867A34627}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TextFormattingMode", "TextFormattingMode\TextFormattingMode.csproj", "{68867219-CB62-42B9-A0B8-2B0F7ADB406E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DatePicker", "DatePicker\DatePicker.csproj", "{05452AE9-A8D2-4BE0-A439-2524F2A4EDE9}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -225,6 +229,14 @@ Global
 		{3496D2D7-9236-4894-A74F-BE5867A34627}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3496D2D7-9236-4894-A74F-BE5867A34627}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3496D2D7-9236-4894-A74F-BE5867A34627}.Release|Any CPU.Build.0 = Release|Any CPU
+		{68867219-CB62-42B9-A0B8-2B0F7ADB406E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{68867219-CB62-42B9-A0B8-2B0F7ADB406E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{68867219-CB62-42B9-A0B8-2B0F7ADB406E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{68867219-CB62-42B9-A0B8-2B0F7ADB406E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{05452AE9-A8D2-4BE0-A439-2524F2A4EDE9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{05452AE9-A8D2-4BE0-A439-2524F2A4EDE9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{05452AE9-A8D2-4BE0-A439-2524F2A4EDE9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{05452AE9-A8D2-4BE0-A439-2524F2A4EDE9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

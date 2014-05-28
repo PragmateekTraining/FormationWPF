@@ -1,0 +1,19 @@
+﻿<Window x:Class="TextFormattingMode.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:system="clr-namespace:System;assembly=mscorlib"
+        Title="MainWindow" SizeToContent="Height" Width="400">
+    <Window.Resources>
+        <system:String x:Key="text">Novitates autem si spem adferunt, ut tamquam in herbis non fallacibus fructus appareat, non sunt illae quidem repudiandae, vetustas tamen suo loco conservanda; maxima est enim vis vetustatis et consuetudinis. Quin in ipso equo, cuius modo feci mentionem, si nulla res impediat, nemo est, quin eo, quo consuevit, libentius utatur quam intractato et novo. Nec vero in hoc quod est animal, sed in iis etiam quae sunt inanima, consuetudo valet, cum locis ipsis delectemur, montuosis etiam et silvestribus, in quibus diutius commorati sumus.</system:String>
+        <Style TargetType="TextBlock">
+            <Setter Property="Text" Value="{StaticResource text}"></Setter>
+            <Setter Property="TextWrapping" Value="Wrap"></Setter>
+        </Style>
+    </Window.Resources>
+    <StackPanel>
+        <TextBlock TextOptions.TextFormattingMode="Ideal" FontSize="8"></TextBlock>
+        <TextBlock TextOptions.TextFormattingMode="Display" FontSize="8"></TextBlock>
+        <TextBlock TextOptions.TextFormattingMode="Ideal" FontSize="16"></TextBlock>
+        <TextBlock TextOptions.TextFormattingMode="Display" FontSize="16"></TextBlock>
+    </StackPanel>
+</Window>
