@@ -1,7 +1,8 @@
-﻿<Window x:Class="SystemResources.MainWindow"
+﻿<Window x:Class="DataContext.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         Title="MainWindow" Height="350" Width="525">
-    <Grid x:Name="grid" Background="{DynamicResource {x:Static SystemColors.MenuHighlightBrushKey}}">
-    </Grid>
+<Grid DataContext="Hello">
+    <TextBlock Text="{Binding}"></TextBlock>
+</Grid>
 </Window>

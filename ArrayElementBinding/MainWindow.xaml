@@ -1,0 +1,31 @@
+﻿<Window x:Class="ArrayElementBinding.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:system="clr-namespace:System;assembly=mscorlib"
+        xmlns:collections="clr-namespace:System.Collections;assembly=mscorlib"
+        Title="MainWindow"
+        SizeToContent="WidthAndHeight">
+    <Window.Resources>
+        <x:Array x:Key="messages" Type="system:String">
+            <system:String>Red</system:String>
+            <system:String>Green</system:String>
+            <system:String>Blue</system:String>
+        </x:Array>
+        <collections:SortedList x:Key="colors">
+            <x:StaticExtension x:Key="Red" Member="Brushes.Red"></x:StaticExtension>
+            <x:StaticExtension x:Key="Green" Member="Brushes.Green"></x:StaticExtension>
+            <x:StaticExtension x:Key="Blue" Member="Brushes.Blue"></x:StaticExtension>
+        </collections:SortedList>
+    </Window.Resources>
+    <StackPanel>
+        <Border Height="20" Width="100" Background="{Binding [Red],Source={StaticResource colors}}">
+            <TextBlock Text="{Binding [0],Source={StaticResource messages}}"></TextBlock>
+        </Border>
+        <Border Height="20" Width="100" Background="{Binding [Green],Source={StaticResource colors}}">
+            <TextBlock Text="{Binding [1],Source={StaticResource messages}}"></TextBlock>
+        </Border>
+        <Border Height="20" Width="100" Background="{Binding [Blue],Source={StaticResource colors}}">
+            <TextBlock Text="{Binding [2],Source={StaticResource messages}}"></TextBlock>
+        </Border>
+    </StackPanel>
+</Window>
