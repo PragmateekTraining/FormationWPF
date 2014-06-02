@@ -1,0 +1,32 @@
+﻿<Window x:Class="Path.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="MainWindow" SizeToContent="WidthAndHeight">
+    <Canvas Width="200" Height="200">
+        <Path Stroke="Green"
+                                  HorizontalAlignment="Center"
+                                  VerticalAlignment="Center">
+            <Path.Data>
+                <PathGeometry>
+                    <PathFigure StartPoint="100,20">
+                        <ArcSegment SweepDirection="Clockwise"
+                                                        Size="50,50"
+                                                        Point="0,20"
+                                                        IsLargeArc="False" />
+                    </PathFigure>
+                </PathGeometry>
+            </Path.Data>
+        </Path>
+        <Path 
+      Fill="Transparent" 
+      Stroke="Black" 
+      StrokeThickness="1" 
+      
+      Data="M 50,0 A 50,50 0 1 1 85.36,35.36"/>
+        <!--<Path Stretch="Fill" 
+      Fill="Transparent" 
+      Stroke="Green" 
+      StrokeThickness="5" 
+      Data="M 0,0 A 1,1 180 0 1 100,100 Z"/>-->
+    </Canvas>
+</Window>
