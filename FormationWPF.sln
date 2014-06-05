@@ -105,6 +105,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ControlTemplate", "ControlT
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataBindingDelay", "DataBindingDelay\DataBindingDelay.csproj", "{06DDB042-93BB-4C29-9498-70FB323443EA}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NameScopes", "NameScopes\NameScopes.csproj", "{FACB543A-3131-4A14-BC19-3D7A67F82D62}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AttachedBehavior", "AttachedBehavior\AttachedBehavior.csproj", "{A8E0A69A-536B-40AF-A4E0-74B1217FED71}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -315,6 +319,14 @@ Global
 		{06DDB042-93BB-4C29-9498-70FB323443EA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{06DDB042-93BB-4C29-9498-70FB323443EA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{06DDB042-93BB-4C29-9498-70FB323443EA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FACB543A-3131-4A14-BC19-3D7A67F82D62}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FACB543A-3131-4A14-BC19-3D7A67F82D62}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FACB543A-3131-4A14-BC19-3D7A67F82D62}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FACB543A-3131-4A14-BC19-3D7A67F82D62}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A8E0A69A-536B-40AF-A4E0-74B1217FED71}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A8E0A69A-536B-40AF-A4E0-74B1217FED71}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A8E0A69A-536B-40AF-A4E0-74B1217FED71}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A8E0A69A-536B-40AF-A4E0-74B1217FED71}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

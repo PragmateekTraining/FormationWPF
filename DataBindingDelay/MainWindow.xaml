@@ -4,5 +4,7 @@
         Title="MainWindow" Height="350" Width="525">
     <Grid>
         <TextBox Text="{Binding Text,Mode=OneWayToSource,Delay=500,UpdateSourceTrigger=PropertyChanged}"></TextBox>
+        <ContentPresenter Content="{TemplateBinding Content}" />
+        <ContentPresenter />
     </Grid>
 </Window>

@@ -1,0 +1,10 @@
+﻿<Window x:Class="AttachedBehavior.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:local="clr-namespace:AttachedBehavior"
+        Title="MainWindow" Height="350" Width="525">
+    <StackPanel>
+        <Button local:KikooEffects.IsBlinking="{Binding IsChecked,ElementName=choiceInput}">Hello</Button>
+        <CheckBox x:Name="choiceInput">Activate killer effect!</CheckBox>
+    </StackPanel>
+</Window>

@@ -1,0 +1,12 @@
+﻿<Window x:Class="NameScopes.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="MainWindow"
+        SizeToContent="WidthAndHeight">
+    <StackPanel>
+        <TextBox x:Name="input"></TextBox>
+        <TextBlock Text="{Binding Text,ElementName=input}"></TextBlock>
+        <TextBlock Text="{Binding Text,ElementName=pouetPouet}"></TextBlock>
+        <TextBlock Text="{Binding Text,ElementName=Input}"></TextBlock>
+    </StackPanel>
+</Window>

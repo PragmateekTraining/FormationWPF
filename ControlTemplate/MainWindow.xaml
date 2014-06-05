@@ -19,7 +19,7 @@
                 <ProgressBar.Template>
                     <ControlTemplate>
                         <Viewbox Stretch="Fill">
-                            <Canvas Height="100" Width="100">
+                            <Canvas Height="100" Width="100" Background="LightGray">
                                 <Rectangle Fill="LimeGreen" Width="{Binding Progress}" Height="100"></Rectangle>
                             </Canvas>
                         </Viewbox>
