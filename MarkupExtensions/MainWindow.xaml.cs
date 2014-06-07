@@ -14,8 +14,18 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace NameScopes
+namespace MarkupExtensions
 {
+    /*public class A
+    {
+        public static A Default = new A();
+
+        public override string ToString()
+        {
+            return "Toto";
+        }
+    }*/
+
     /// <summary>
     /// Interaction logic for MainWindow.xaml
     /// </summary>
@@ -24,16 +34,6 @@ namespace NameScopes
         public MainWindow()
         {
             InitializeComponent();
-
-            /*input.Name = "pouetPouet";
-
-            var o = this.FindName(input.Name);*/
-
-            this.RegisterName("pouetPouet", input);
-
-            // NameScope.GetNameScope(this).RegisterName("pouetPouet", input);
-
-            // input.RegisterName("pouetPouet", input);            
         }
     }
 }

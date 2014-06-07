@@ -8,13 +8,12 @@ using System.Windows.Controls;
 using System.Windows.Data;
 using System.Windows.Documents;
 using System.Windows.Input;
-using System.Windows.Markup;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace NameScopes
+namespace StaticResources
 {
     /// <summary>
     /// Interaction logic for MainWindow.xaml
@@ -24,16 +23,6 @@ namespace NameScopes
         public MainWindow()
         {
             InitializeComponent();
-
-            /*input.Name = "pouetPouet";
-
-            var o = this.FindName(input.Name);*/
-
-            this.RegisterName("pouetPouet", input);
-
-            // NameScope.GetNameScope(this).RegisterName("pouetPouet", input);
-
-            // input.RegisterName("pouetPouet", input);            
         }
     }
 }
