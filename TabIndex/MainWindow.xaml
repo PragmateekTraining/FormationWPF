@@ -1,0 +1,10 @@
+﻿<Window x:Class="TabIndex.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="MainWindow" Height="350" Width="525" ResizeMode="NoResize">
+    <StackPanel>
+        <TextBox TabIndex="1"></TextBox>
+        <TextBox TabIndex="0" IsTabStop="False"></TextBox>
+        <TextBox TabIndex="-1"></TextBox>
+    </StackPanel>
+</Window>

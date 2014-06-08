@@ -5,6 +5,5 @@
         Title="MainWindow" Height="350" Width="525">
     <Grid>
         <Button Click="Button_Click_1"></Button>
-        <Button x:Name="toto" Click="toto_Click_1"
     </Grid>
 </Window>
