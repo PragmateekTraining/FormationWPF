@@ -8,6 +8,11 @@
         <vm:NameViewModel x:Key="NameViewModel" />
     </Window.Resources>
     <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
         <local:NameView Model="{StaticResource NameViewModel}" />
+        <local:CharactersCountView Grid.Row="1"></local:CharactersCountView>
     </Grid>
 </Window>

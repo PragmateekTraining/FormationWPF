@@ -1,0 +1,36 @@
+﻿<UserControl x:Class="DataBinding.CharactersCountView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:local="clr-namespace:DataBinding"
+             xmlns:system="clr-namespace:System;assembly=mscorlib"
+             mc:Ignorable="d" 
+             d:DesignHeight="300" d:DesignWidth="300">
+    <UserControl.Resources>
+        <local:SpreadConverter x:Key="spreadConverter"></local:SpreadConverter>
+    </UserControl.Resources>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <TextBox x:Name="input" VerticalAlignment="Center"></TextBox>
+        <TextBlock Text="{Binding ElementName=input,Path=Text.Length}" Grid.Column="1" VerticalAlignment="Center"></TextBlock>
+        <TextBlock Text="{Binding ElementName=input,Path=Text.Length,Converter={StaticResource spreadConverter},ConverterParameter=200,StringFormat='({0} more to go)'}" Grid.Column="2" VerticalAlignment="Center"></TextBlock>
+        
+        <TextBlock Text="Hello" FontSize="{Binding ElementName=fontSizeInput,Path=Value}" Foreground="{Binding ElementName=colorInput,Path=SelectedItem}" Grid.Row="1" VerticalAlignment="Center"></TextBlock>
+        <Slider x:Name="fontSizeInput" Minimum="20" Maximum="40" Value="30" Grid.Row="1" Grid.Column="1" VerticalAlignment="Center"></Slider>
+        <ComboBox x:Name="colorInput" Grid.Row="1" Grid.Column="2" VerticalAlignment="Center" SelectedIndex="0">
+            <system:String>Black</system:String>
+            <system:String>Red</system:String>
+            <system:String>Green</system:String>
+            <system:String>Blue</system:String>
+        </ComboBox>
+    </Grid>
+</UserControl>
