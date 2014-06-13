@@ -16,7 +16,17 @@
         <TextBox Text="{Binding Model.Computer.Name,UpdateSourceTrigger=PropertyChanged}" BorderBrush="BlueViolet" BorderThickness="1" Margin="5" MinWidth="100" Grid.Column="1" />
         <TextBox ToolTip="{Binding Text,RelativeSource={RelativeSource Self}}" Grid.Row="1"></TextBox>
         <Slider x:Name="slider" ToolTip="{Binding Value,RelativeSource={RelativeSource Self}}" Grid.Row="1" Grid.Column="1"></Slider>
-        <TextBlock Text="{Binding Tag,RelativeSource={RelativeSource FindAncestor,AncestorType=Grid}}" Grid.Row="2"></TextBlock>
+
+        <StackPanel Grid.Row="2">
+            <TextBlock Text="{Binding Tag,RelativeSource={RelativeSource FindAncestor,AncestorType=Grid}}"></TextBlock>
+            <Grid Tag="World">
+                <TextBlock Text="{Binding Tag,RelativeSource={RelativeSource AncestorType=Grid,AncestorLevel=1}}"></TextBlock>
+            </Grid>
+            <Grid Tag="World">
+                <TextBlock Text="{Binding Tag,RelativeSource={RelativeSource AncestorType=Grid,AncestorLevel=2}}"></TextBlock>
+            </Grid>
+        </StackPanel>
+        
         <Slider Value="{Binding Value,ElementName=slider}" Grid.Row="2" Grid.Column="1"></Slider>
         <!--<Slider Tag="{Binding Source={RelativeSource Self}}" Grid.Column="1" Grid.Row="1">
             <Slider.ToolTip>

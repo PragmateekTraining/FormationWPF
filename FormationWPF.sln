@@ -121,6 +121,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TabIndex", "TabIndex\TabInd
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Animations.Console", "Animations.Console\Animations.Console.csproj", "{DA5A94C4-B6EA-410B-8F71-9D14E991A1FA}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "INPC", "INPC\INPC.csproj", "{E068F9A2-95E7-405C-8DCA-882964432B02}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -363,6 +365,10 @@ Global
 		{DA5A94C4-B6EA-410B-8F71-9D14E991A1FA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DA5A94C4-B6EA-410B-8F71-9D14E991A1FA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DA5A94C4-B6EA-410B-8F71-9D14E991A1FA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E068F9A2-95E7-405C-8DCA-882964432B02}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E068F9A2-95E7-405C-8DCA-882964432B02}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E068F9A2-95E7-405C-8DCA-882964432B02}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E068F9A2-95E7-405C-8DCA-882964432B02}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
