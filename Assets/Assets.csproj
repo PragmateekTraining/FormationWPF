@@ -41,12 +41,21 @@
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Resource Include="images\icons\computer.png" />
+    <Resource Include="images\icons\laptop.png" />
+  </ItemGroup>
   <ItemGroup>
     <Resource Include="images\icons\exit.png" />
     <Resource Include="images\icons\home.png" />
     <Resource Include="images\icons\login.png" />
     <Resource Include="images\icons\open.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\icons\file.png" />
+    <Resource Include="images\icons\folder.png" />
+    <Resource Include="images\icons\program.png" />
+    <Resource Include="images\icons\text_file.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

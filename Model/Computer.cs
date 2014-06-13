@@ -27,4 +27,8 @@ namespace Model
             }
         }
     }
+
+    public class Laptop : Computer
+    {
+    }
 }

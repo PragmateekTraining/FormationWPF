@@ -1,0 +1,47 @@
+﻿<Window x:Class="DataTemplateSelectorSample.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:local="clr-namespace:DataTemplateSelectorSample"
+        Title="MainWindow" Height="350" Width="525">
+    <Window.Resources>
+        <Style TargetType="Image">
+            <Setter Property="Width" Value="48"></Setter>
+            <Setter Property="Height" Value="48"></Setter>
+        </Style>
+        <local:ExtractFileConverter x:Key="fileConverter"></local:ExtractFileConverter>
+        <DataTemplate x:Key="folderTemplate">
+            <DockPanel>
+                <Image DockPanel.Dock="Left" Source="/Assets;component/images/icons/folder.png" Width="48" Height="48"></Image>
+                <TextBlock Text="{Binding Converter={StaticResource fileConverter}}"></TextBlock>
+            </DockPanel>
+        </DataTemplate>
+        <DataTemplate x:Key="fileTemplate">
+            <DockPanel>
+                <Image DockPanel.Dock="Left" Source="/Assets;component/images/icons/file.png" Width="48" Height="48"></Image>
+                <TextBlock Text="{Binding Converter={StaticResource fileConverter}}"></TextBlock>
+            </DockPanel>
+        </DataTemplate>
+        <DataTemplate x:Key="textFileTemplate">
+            <DockPanel>
+                <Image DockPanel.Dock="Left" Source="/Assets;component/images/icons/text_file.png" Width="48" Height="48"></Image>
+                <TextBlock Text="{Binding Converter={StaticResource fileConverter}}"></TextBlock>
+            </DockPanel>
+        </DataTemplate>
+        <DataTemplate x:Key="applicationTemplate">
+            <DockPanel>
+                <Image DockPanel.Dock="Left" Source="/Assets;component/images/icons/program.png"></Image>
+                <TextBlock Text="{Binding Converter={StaticResource fileConverter}}"></TextBlock>
+            </DockPanel>
+        </DataTemplate>
+        <local:FileSystemElementTemplateSelector x:Key="templateSelector"
+                                                 FolderTemplate="{StaticResource folderTemplate}"
+                                                 FileTemplate="{StaticResource fileTemplate}"
+                                                 TextFileTemplate="{StaticResource textFileTemplate}"
+                                                 ApplicationTemplate="{StaticResource applicationTemplate}"></local:FileSystemElementTemplateSelector>
+    </Window.Resources>
+    <DockPanel>
+        <Image Source="/Assets;component/images/icons/program.png" DockPanel.Dock="Top"></Image>
+        <TextBox Text="{Binding Model.Path}" DockPanel.Dock="Bottom"></TextBox>
+        <ListBox ItemsSource="{Binding Model.FileSystemElements}" ItemTemplateSelector="{StaticResource templateSelector}"></ListBox>
+    </DockPanel>
+</Window>

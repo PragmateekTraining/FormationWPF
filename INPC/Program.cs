@@ -1,6 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
+using System.Collections.Specialized;
 using System.ComponentModel;
+using System.Diagnostics;
 using System.Linq.Expressions;
 using System.Reflection;
 using System.Runtime.CompilerServices;
@@ -57,6 +60,33 @@ namespace INPC
         }
     }
 
+    public class NotifyPropertyChangedImpl_Bad : DependencyObject, INotifyPropertyChanged
+    {
+        public event PropertyChangedEventHandler PropertyChanged = delegate { };
+
+        protected void UpdateAndNotify<T>(T newValue)
+        {
+            StackFrame sf = new StackFrame(1);
+
+            MethodBase m = sf.GetMethod();
+
+            string propertyName = m.Name.Substring(4);
+
+            PropertyInfo property = this.GetType().GetProperty(propertyName);
+
+            T oldValue = (T)property.GetValue(this, null);
+
+            if (!EqualityComparer<T>.Default.Equals(newValue, oldValue))
+            {
+                FieldInfo backingField = this.GetType().GetField(char.ToLower(property.Name[0]) + property.Name.Substring(1), BindingFlags.NonPublic | BindingFlags.Instance);
+
+                backingField.SetValue(this, newValue);
+
+                PropertyChanged(this, new PropertyChangedEventArgs(property.Name));
+            }
+        }
+    }
+
     class Program
     {
         interface IA
@@ -109,11 +139,27 @@ namespace INPC
             }
         }
 
+        class A_Bad : NotifyPropertyChangedImpl_Bad, IA
+        {
+            private int n;
+            public int N
+            {
+                get { return n; }
+                set { UpdateAndNotify(value); }
+            }
+
+            public override string ToString()
+            {
+                return "A_Bad";
+            }
+        }
+
         static void Main(string[] args)
         {
             A_Simple a_simple = new A_Simple();
             A_TypeSafe a_typeSafe = new A_TypeSafe();
             A_CSharp5 a_CSharp5 = new A_CSharp5();
+            A_Bad a_Bad = new A_Bad();
 
             PropertyChangedEventHandler onPropertyChanged = (s, a) =>
                 {
@@ -126,28 +172,35 @@ namespace INPC
             a_simple.PropertyChanged += onPropertyChanged;
             a_typeSafe.PropertyChanged += onPropertyChanged;
             a_CSharp5.PropertyChanged += onPropertyChanged;
+            a_Bad.PropertyChanged += onPropertyChanged;
 
             a_simple.N = 1;
             a_typeSafe.N = 1;
             a_CSharp5.N = 1;
+            a_Bad.N = 1;
 
             Console.WriteLine(new string('=', 20));
 
             a_simple.N = 1;
             a_typeSafe.N = 1;
             a_CSharp5.N = 1;
+            a_Bad.N = 1;
 
             Console.WriteLine(new string('=', 20));
 
             a_simple.N = 2;
             a_typeSafe.N = 2;
             a_CSharp5.N = 2;
+            a_Bad.N = 2;
 
             Console.WriteLine(new string('=', 20));
 
             a_simple.N = 3;
             a_typeSafe.N = 3;
             a_CSharp5.N = 3;
+            a_Bad.N = 3;
+
+            Console.ReadLine();
         }
     }
 }

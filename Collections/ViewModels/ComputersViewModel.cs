@@ -37,7 +37,8 @@ namespace Collections.ViewModels
             Computers = new ObservableCollection<Computer>
             {
                 new Computer { Name = "Home"},
-                new Computer { Name = "Work"}
+                new Computer { Name = "Work"},
+                new Laptop { Name = "Work (roaming)" }
             };
         }
 
