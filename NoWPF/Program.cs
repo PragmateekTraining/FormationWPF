@@ -1,9 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows;
 
 namespace NoWPF
 {
@@ -12,7 +7,8 @@ namespace NoWPF
         static void Main(string[] args)
         {
             // new RawDependencyPropertySample().Run();
-            new RawDataBindingSample().Run();
+            // new RawDataBindingSample().Run();
+            new PropertyPathSample().Run();
 
             Console.ReadLine();
         }

@@ -1,8 +1,9 @@
 ﻿<Window x:Class="ObjectDataProvider.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:local="clr-namespace:ObjectDataProvider"
         Title="MainWindow" Height="350" Width="525">
     <Grid>
-        
+        <local:CreateGUIDView></local:CreateGUIDView>   
     </Grid>
 </Window>

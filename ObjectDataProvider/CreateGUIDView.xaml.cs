@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -9,7 +8,6 @@ using System.Windows.Controls;
 using System.Windows.Data;
 using System.Windows.Documents;
 using System.Windows.Input;
-using System.Windows.Markup;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
@@ -18,11 +16,11 @@ using System.Windows.Shapes;
 namespace ObjectDataProvider
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Interaction logic for CreateGUIDView.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class CreateGUIDView : UserControl
     {
-        public MainWindow()
+        public CreateGUIDView()
         {
             InitializeComponent();
         }
