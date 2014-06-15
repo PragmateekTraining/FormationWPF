@@ -1,0 +1,9 @@
+﻿<Window x:Class="MediaElementSample.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="MainWindow" Height="350" Width="525">
+    <Grid>
+        <MediaElement x:Name="video" LoadedBehavior="Manual" UnloadedBehavior="Manual" Source="C:\Users\Public\Music\Sample Music\Kalimba.mp3" MouseLeftButtonUp="video_MouseLeftButtonUp"></MediaElement>
+        <Image x:Name="image" Width="48" Height="48" RenderOptions.BitmapScalingMode="HighQuality" MouseLeftButtonUp="image_MouseLeftButtonUp"></Image>
+    </Grid>
+</Window>

@@ -127,6 +127,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataTemplateSelectorSample"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ObjectDataProvider", "ObjectDataProvider\ObjectDataProvider.csproj", "{AD2197C7-DF00-43DD-85E1-AF229F75A57A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MediaElementSample", "MediaElementSample\MediaElementSample.csproj", "{22F545B3-2FCD-4DCD-B4CB-0AE5C16B2926}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CanvasSample", "CanvasSample\CanvasSample.csproj", "{A8F2AF4D-94C8-4938-AF99-8CB459950C2A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -381,6 +385,14 @@ Global
 		{AD2197C7-DF00-43DD-85E1-AF229F75A57A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AD2197C7-DF00-43DD-85E1-AF229F75A57A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AD2197C7-DF00-43DD-85E1-AF229F75A57A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{22F545B3-2FCD-4DCD-B4CB-0AE5C16B2926}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{22F545B3-2FCD-4DCD-B4CB-0AE5C16B2926}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{22F545B3-2FCD-4DCD-B4CB-0AE5C16B2926}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{22F545B3-2FCD-4DCD-B4CB-0AE5C16B2926}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A8F2AF4D-94C8-4938-AF99-8CB459950C2A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A8F2AF4D-94C8-4938-AF99-8CB459950C2A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A8F2AF4D-94C8-4938-AF99-8CB459950C2A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A8F2AF4D-94C8-4938-AF99-8CB459950C2A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

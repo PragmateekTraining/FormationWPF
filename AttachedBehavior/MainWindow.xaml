@@ -6,5 +6,10 @@
     <StackPanel>
         <Button local:KikooEffects.IsBlinking="{Binding IsChecked,ElementName=choiceInput}">Hello</Button>
         <CheckBox x:Name="choiceInput">Activate killer effect!</CheckBox>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"
+            </Grid.RowDefinitions>
+        </Grid>
     </StackPanel>
 </Window>

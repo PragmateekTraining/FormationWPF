@@ -57,6 +57,10 @@
     <Resource Include="images\icons\program.png" />
     <Resource Include="images\icons\text_file.png" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\icons\pause.png" />
+    <Resource Include="images\icons\play.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
