@@ -90,7 +90,7 @@ namespace CollectionViewsPropertyGroups
             view.SortDescriptions.Add(new SortDescription(null, ListSortDirection.Ascending));
             view.SortDescriptions.Add(new SortDescription(null, ListSortDirection.Descending));
 
-            view.Filter = x => (int)x > 0;
+            //view.Filter = x => (int)x > 0;
         }
     }
 }

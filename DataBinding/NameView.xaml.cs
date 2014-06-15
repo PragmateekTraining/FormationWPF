@@ -21,7 +21,7 @@ namespace DataBinding
     /// </summary>
     public partial class NameView : UserControl
     {
-        public static readonly DependencyProperty ModelProperty = DependencyProperty.Register("Model", typeof(NameViewModel), typeof(NameView),);
+        public static readonly DependencyProperty ModelProperty = DependencyProperty.Register("Model", typeof(NameViewModel), typeof(NameView));
 
         public NameViewModel Model
         {

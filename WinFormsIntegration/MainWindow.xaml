@@ -1,0 +1,13 @@
+﻿<Window x:Class="WinFormsIntegration.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:winformsapp="clr-namespace:WindowsFormsApplication;assembly=WindowsFormsApplication"
+        Title="MainWindow" Height="350" Width="525">
+    <DockPanel>
+        <DatePicker DockPanel.Dock="Top" TabIndex="0"></DatePicker>
+        <ComboBox DockPanel.Dock="Bottom" TabIndex="2"></ComboBox>
+        <WindowsFormsHost TabIndex="1">
+            <winformsapp:UserDataControl x:Name="userDataControl" FirstName="..." LastName="..."></winformsapp:UserDataControl>
+        </WindowsFormsHost>
+    </DockPanel>
+</Window>

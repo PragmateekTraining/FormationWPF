@@ -1,0 +1,10 @@
+﻿<Window x:Class="DockPanelTabIndex.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="MainWindow" Height="350" Width="525">
+    <DockPanel>
+        <TextBox Text="First" DockPanel.Dock="Top" TabIndex="0"></TextBox>
+        <TextBox Text="Third" DockPanel.Dock="Bottom" TabIndex="2"></TextBox>
+        <TextBox Text="Second" TabIndex="1"></TextBox>
+    </DockPanel>
+</Window>

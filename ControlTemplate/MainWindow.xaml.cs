@@ -132,6 +132,8 @@ namespace ControlTemplate
 
             //Console.WriteLine("Press enter to stop...");
 
+            // worker.RunWorkerCompleted += (object sender, RunWorkerCompletedEventArgs e) => ...;
+
             worker.RunWorkerAsync();
         }
     }

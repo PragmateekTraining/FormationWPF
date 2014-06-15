@@ -40,7 +40,7 @@ namespace CanvasSample
         {
             TextBlock tb = new TextBlock
             {
-                Text = "" + (char)(rand.Next(256 - 33) + 33),
+                Text = "" + (char)(rand.Next(128 - 33) + 33),
                 Foreground = GetRandomBrush(),
                 FontWeight = FontWeights.Bold
             };

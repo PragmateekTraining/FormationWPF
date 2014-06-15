@@ -131,6 +131,18 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MediaElementSample", "Media
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CanvasSample", "CanvasSample\CanvasSample.csproj", "{A8F2AF4D-94C8-4938-AF99-8CB459950C2A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CollectionViewsFiltering", "CollectionViewsFiltering\CollectionViewsFiltering.csproj", "{5C783D71-C38D-4729-8C4C-442F8ACF8FAE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WinFormsIntegration", "WinFormsIntegration\WinFormsIntegration.csproj", "{EE7EA8DD-79E9-48FB-B103-32DAC0693E4F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WindowsFormsApplication", "WindowsFormsApplication\WindowsFormsApplication.csproj", "{E395068C-B8C8-4F70-9E9B-C3C868E43D09}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DockPanelTabIndex", "DockPanelTabIndex\DockPanelTabIndex.csproj", "{67CA13A0-5C6B-4152-B4A1-7C2BA9406A53}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfApplication", "WpfApplication\WpfApplication.csproj", "{1691B069-67B6-4EAD-9625-62FC37022D0B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfIntegration", "WpfIntegration\WpfIntegration.csproj", "{F7C1D605-801A-4FEE-915C-04036EECB5DF}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -393,6 +405,30 @@ Global
 		{A8F2AF4D-94C8-4938-AF99-8CB459950C2A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A8F2AF4D-94C8-4938-AF99-8CB459950C2A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A8F2AF4D-94C8-4938-AF99-8CB459950C2A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5C783D71-C38D-4729-8C4C-442F8ACF8FAE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5C783D71-C38D-4729-8C4C-442F8ACF8FAE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5C783D71-C38D-4729-8C4C-442F8ACF8FAE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5C783D71-C38D-4729-8C4C-442F8ACF8FAE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EE7EA8DD-79E9-48FB-B103-32DAC0693E4F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EE7EA8DD-79E9-48FB-B103-32DAC0693E4F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EE7EA8DD-79E9-48FB-B103-32DAC0693E4F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EE7EA8DD-79E9-48FB-B103-32DAC0693E4F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E395068C-B8C8-4F70-9E9B-C3C868E43D09}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E395068C-B8C8-4F70-9E9B-C3C868E43D09}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E395068C-B8C8-4F70-9E9B-C3C868E43D09}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E395068C-B8C8-4F70-9E9B-C3C868E43D09}.Release|Any CPU.Build.0 = Release|Any CPU
+		{67CA13A0-5C6B-4152-B4A1-7C2BA9406A53}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{67CA13A0-5C6B-4152-B4A1-7C2BA9406A53}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{67CA13A0-5C6B-4152-B4A1-7C2BA9406A53}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{67CA13A0-5C6B-4152-B4A1-7C2BA9406A53}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1691B069-67B6-4EAD-9625-62FC37022D0B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1691B069-67B6-4EAD-9625-62FC37022D0B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1691B069-67B6-4EAD-9625-62FC37022D0B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1691B069-67B6-4EAD-9625-62FC37022D0B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F7C1D605-801A-4FEE-915C-04036EECB5DF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F7C1D605-801A-4FEE-915C-04036EECB5DF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F7C1D605-801A-4FEE-915C-04036EECB5DF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F7C1D605-801A-4FEE-915C-04036EECB5DF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
