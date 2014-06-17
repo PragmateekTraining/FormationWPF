@@ -1,0 +1,13 @@
+﻿<Window x:Class="Validation.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:local="clr-namespace:Validation"
+        Title="MainWindow" Height="350" Width="300">
+    <Grid>
+        <local:RegistrationView>
+            <local:RegistrationView.Model>
+                <local:RegistrationViewModel></local:RegistrationViewModel>
+            </local:RegistrationView.Model>
+        </local:RegistrationView>
+    </Grid>
+</Window>

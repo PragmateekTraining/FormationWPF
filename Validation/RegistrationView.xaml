@@ -1,0 +1,55 @@
+﻿<UserControl x:Class="Validation.RegistrationView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" 
+             d:DesignHeight="300" d:DesignWidth="300">
+    <UserControl.Resources>
+        <Style x:Key="ErrorStyle" TargetType="Control">
+            <Style.Triggers>
+                <Trigger Property="Validation.HasError" Value="true">
+                    <Setter Property="ToolTip" Value="{Binding RelativeSource={x:Static RelativeSource.Self}, Path=(Validation.Errors)[0].ErrorContent}"/>
+                </Trigger>
+                <Trigger Property="Validation.HasError" Value="false">
+                    <Setter Property="BorderBrush" Value="Green"/>
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+        <Style TargetType="TextBox" BasedOn="{StaticResource ErrorStyle}">
+        </Style>
+        <Style TargetType="DatePicker" BasedOn="{StaticResource ErrorStyle}">
+        </Style>
+    </UserControl.Resources>
+    <StackPanel Margin="5">
+        <Label>_First name :</Label>
+        <TextBox x:Name="firstNameInput" Text="{Binding Model.FirstName,UpdateSourceTrigger=PropertyChanged}"></TextBox>
+        <Label>_Last name :</Label>
+        <TextBox x:Name="lastNameInput" Text="{Binding Model.LastName,UpdateSourceTrigger=PropertyChanged}"></TextBox>
+        <Label>_Date of birth</Label>
+        <DatePicker x:Name="dateOfBirthInput" SelectedDate="{Binding Model.DateOfBirth,UpdateSourceTrigger=PropertyChanged}"></DatePicker>
+        <Label>_Password :</Label>
+        <TextBox x:Name="passwordInput" Text="{Binding Model.Password,UpdateSourceTrigger=PropertyChanged}" Foreground="Transparent"></TextBox>
+        <Label>Password_confirmation :</Label>
+        <TextBox x:Name="passwordConfirmationInput" Text="{Binding Model.PasswordConfirmation,UpdateSourceTrigger=PropertyChanged}" Foreground="Transparent"></TextBox>
+        <Button Content="Register" Margin="0,10,0,0">
+            <Button.Style>
+                <Style TargetType="Button">
+                    <Setter Property="IsEnabled" Value="False"/>
+                    <Style.Triggers>
+                        <MultiDataTrigger>
+                            <MultiDataTrigger.Conditions>
+                                <Condition Binding="{Binding Path=(Validation.HasError), ElementName=firstNameInput}" Value="False"/>
+                                <Condition Binding="{Binding Path=(Validation.HasError), ElementName=lastNameInput}" Value="False"/>
+                                <Condition Binding="{Binding Path=(Validation.HasError), ElementName=dateOfBirthInput}" Value="False"/>
+                                <Condition Binding="{Binding Path=(Validation.HasError), ElementName=passwordInput}" Value="False"/>
+                                <Condition Binding="{Binding Path=(Validation.HasError), ElementName=passwordConfirmationInput}" Value="False"/>
+                            </MultiDataTrigger.Conditions>
+                            <Setter Property="IsEnabled" Value="True"/>
+                        </MultiDataTrigger>
+                    </Style.Triggers>
+                </Style>
+            </Button.Style>
+        </Button>
+    </StackPanel>
+</UserControl>
