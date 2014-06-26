@@ -42,7 +42,7 @@ namespace CanvasSample
             {
                 Text = "" + (char)(rand.Next(128 - 33) + 33),
                 Foreground = GetRandomBrush(),
-                FontWeight = FontWeights.Bold
+                // FontWeight = FontWeights.Bold
             };
             tb.SetValue(Canvas.TopProperty, e.GetPosition(canvas).Y);
             Canvas.SetLeft(tb, e.GetPosition(canvas).X);

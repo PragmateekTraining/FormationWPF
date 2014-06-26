@@ -145,6 +145,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfIntegration", "WpfIntegr
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Validation", "Validation\Validation.csproj", "{0EE643F5-FCEF-48EB-955F-91B88B1AC4EC}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ScrollViewerSample", "ScrollViewerSample\ScrollViewerSample.csproj", "{4DE61D61-11CB-405B-B2AC-FDEA2E58E400}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PasswordBoxSample", "PasswordBoxSample\PasswordBoxSample.csproj", "{6463EC6A-7149-4F03-88FA-62B776D81B97}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -435,6 +439,14 @@ Global
 		{0EE643F5-FCEF-48EB-955F-91B88B1AC4EC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0EE643F5-FCEF-48EB-955F-91B88B1AC4EC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0EE643F5-FCEF-48EB-955F-91B88B1AC4EC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4DE61D61-11CB-405B-B2AC-FDEA2E58E400}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4DE61D61-11CB-405B-B2AC-FDEA2E58E400}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4DE61D61-11CB-405B-B2AC-FDEA2E58E400}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4DE61D61-11CB-405B-B2AC-FDEA2E58E400}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6463EC6A-7149-4F03-88FA-62B776D81B97}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6463EC6A-7149-4F03-88FA-62B776D81B97}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6463EC6A-7149-4F03-88FA-62B776D81B97}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6463EC6A-7149-4F03-88FA-62B776D81B97}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

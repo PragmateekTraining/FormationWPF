@@ -1,0 +1,8 @@
+﻿<Window x:Class="ScrollViewerSample.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="MainWindow" Height="350" Width="525">
+    <ScrollViewer HorizontalScrollBarVisibility="Auto" IsDeferredScrollingEnabled="True">
+        <Image Source="/Assets;component/images/icons/laptop.png" Width="600"></Image>
+    </ScrollViewer>
+</Window>
