@@ -1,0 +1,21 @@
+﻿<Window x:Class="ImplicitStyles.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="MainWindow" Height="350" Width="525">
+    <Window.Resources>
+        <Style x:Key="textBoxStyle" TargetType="TextBox">
+            <Setter Property="FontWeight" Value="Bold"></Setter>
+        </Style>
+        <Style x:Key="{x:Type Label}" TargetType="Label">
+            <Setter Property="FontWeight" Value="Bold"></Setter>
+        </Style>
+        <Style TargetType="TextBlock">
+            <Setter Property="TextBlock.FontWeight" Value="Bold"></Setter>
+        </Style>
+    </Window.Resources>
+    <StackPanel>
+        <TextBox>Hello!</TextBox>
+        <Label>Hello!</Label>
+        <TextBlock>Hello!</TextBlock>
+    </StackPanel>
+</Window>
