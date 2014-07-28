@@ -151,6 +151,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PasswordBoxSample", "Passwo
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ImplicitStyles", "ImplicitStyles\ImplicitStyles.csproj", "{4A40E619-8B74-4B11-B1A7-03E1337ECCEE}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProgressBarSample", "ProgressBarSample\ProgressBarSample.csproj", "{B160F9B1-9794-456D-9983-2233CB574353}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -453,6 +455,10 @@ Global
 		{4A40E619-8B74-4B11-B1A7-03E1337ECCEE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4A40E619-8B74-4B11-B1A7-03E1337ECCEE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4A40E619-8B74-4B11-B1A7-03E1337ECCEE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B160F9B1-9794-456D-9983-2233CB574353}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B160F9B1-9794-456D-9983-2233CB574353}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B160F9B1-9794-456D-9983-2233CB574353}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B160F9B1-9794-456D-9983-2233CB574353}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -1,0 +1,15 @@
+﻿<Window x:Class="ProgressBarSample.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="MainWindow" Height="350" Width="525">
+    <StackPanel>
+        <StackPanel.Resources>
+            <Style TargetType="ProgressBar">
+                <Setter Property="Height" Value="20"></Setter>
+                <Setter Property="Margin" Value="10"></Setter>
+            </Style>
+        </StackPanel.Resources>
+        <ProgressBar Value="50"></ProgressBar>
+        <ProgressBar IsIndeterminate="True"></ProgressBar>
+    </StackPanel>
+</Window>
