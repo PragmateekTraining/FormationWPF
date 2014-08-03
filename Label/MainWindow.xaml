@@ -7,6 +7,7 @@
         <Grid.RowDefinitions>
             <RowDefinition></RowDefinition>
             <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
             <ColumnDefinition></ColumnDefinition>
@@ -16,5 +17,7 @@
         <TextBox Grid.Column="1"></TextBox>
         <Label Content="_Last name:" Target="lastNameInput" Grid.Row="1"></Label>
         <TextBox x:Name="lastNameInput" Grid.Row="1" Grid.Column="1"></TextBox>
+        <Label Content="_Date of Birth:" Target="{x:Reference dateOfBirthInput}" Grid.Row="2"></Label>
+        <TextBox x:Name="dateOfBirthInput" Grid.Row="2" Grid.Column="1"></TextBox>
     </Grid>
 </Window>
