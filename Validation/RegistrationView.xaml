@@ -21,16 +21,16 @@
         <Style TargetType="DatePicker" BasedOn="{StaticResource ErrorStyle}">
         </Style>
     </UserControl.Resources>
-    <StackPanel Margin="5">
-        <Label>_First name :</Label>
+    <StackPanel x:Name="root" Margin="5">
+        <Label Target="firstNameInput">_First name :</Label>
         <TextBox x:Name="firstNameInput" Text="{Binding Model.FirstName,UpdateSourceTrigger=PropertyChanged}"></TextBox>
-        <Label>_Last name :</Label>
+        <Label Target="lastNameInput">_Last name :</Label>
         <TextBox x:Name="lastNameInput" Text="{Binding Model.LastName,UpdateSourceTrigger=PropertyChanged}"></TextBox>
-        <Label>_Date of birth</Label>
+        <Label Target="dateOfBirthInput">_Date of birth</Label>
         <DatePicker x:Name="dateOfBirthInput" SelectedDate="{Binding Model.DateOfBirth,UpdateSourceTrigger=PropertyChanged}"></DatePicker>
-        <Label>_Password :</Label>
+        <Label Target="passwordInput">_Password :</Label>
         <TextBox x:Name="passwordInput" Text="{Binding Model.Password,UpdateSourceTrigger=PropertyChanged}" Foreground="Transparent"></TextBox>
-        <Label>Password_confirmation :</Label>
+        <Label Target="passwordConfirmationInput">Password _confirmation :</Label>
         <TextBox x:Name="passwordConfirmationInput" Text="{Binding Model.PasswordConfirmation,UpdateSourceTrigger=PropertyChanged}" Foreground="Transparent"></TextBox>
         <Button Content="Register" Margin="0,10,0,0">
             <Button.Style>

@@ -26,7 +26,7 @@
             </Border>
         </DataTemplate>
     </UserControl.Resources>
-    <DockPanel Background="AliceBlue">
+    <DockPanel x:Name="root" Background="AliceBlue">
         <StackPanel DockPanel.Dock="Bottom">
             <Button Content="Add new computer" Margin="5" Click="AddComputerButton_Click"></Button>
             <TextBox Text="{Binding Model.SelectedComputer.Name,UpdateSourceTrigger=PropertyChanged}" BorderBrush="BlueViolet" BorderThickness="1" Margin="5" />

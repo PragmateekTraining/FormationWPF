@@ -39,7 +39,7 @@ namespace DataBinding
         {
             InitializeComponent();
 
-            DataContext = this;
+            root.DataContext = this;
         }
     }
 }

@@ -34,7 +34,7 @@ namespace WpfApplication
         {
             InitializeComponent();
 
-            DataContext = this;
+            root.DataContext = this;
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)

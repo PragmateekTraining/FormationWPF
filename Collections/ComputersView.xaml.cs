@@ -39,7 +39,7 @@ namespace Collections
         {
             InitializeComponent();
 
-            DataContext = this;
+            root.DataContext = this;
         }
 
         private void AddComputerButton_Click(object sender, RoutedEventArgs e)

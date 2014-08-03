@@ -33,7 +33,7 @@ namespace Validation
         {
             InitializeComponent();
 
-            DataContext = this;
+            root.DataContext = this;
         }
     }
 }
