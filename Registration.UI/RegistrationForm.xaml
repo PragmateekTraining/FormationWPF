@@ -1,0 +1,65 @@
+﻿<UserControl x:Class="MVVM.RegistrationForm"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" 
+             d:DesignHeight="300" d:DesignWidth="300">
+    <DockPanel>
+        <DockPanel DockPanel.Dock="Bottom" LastChildFill="False">
+            <Button DockPanel.Dock="Right"
+                    Margin="10" Padding="5"
+                    IsEnabled="{Binding Model.RegistrationData.IsAccepted}"
+                    Command="{Binding Model.CommitData}" CommandParameter="{Binding Model.RegistrationData}">OK</Button>
+            <Button DockPanel.Dock="Right" Margin="10" Padding="5">Cancel</Button>
+        </DockPanel>
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"></RowDefinition>
+                <RowDefinition Height="Auto"></RowDefinition>
+                <RowDefinition Height="Auto"></RowDefinition>
+                <RowDefinition Height="Auto"></RowDefinition>
+                <RowDefinition Height="Auto"></RowDefinition>
+                <RowDefinition Height="Auto"></RowDefinition>
+                <RowDefinition Height="Auto"></RowDefinition>
+            </Grid.RowDefinitions>
+            <Label>First Name :</Label>
+            <TextBox x:Name="firstNameInput" Text="{Binding Model.RegistrationData.FirstName}" Grid.Column="1"></TextBox>
+
+            <Label Grid.Row="1">Last Name :</Label>
+            <TextBox x:Name="lastNameInput" Text="{Binding Model.RegistrationData.LastName}" Grid.Row="1" Grid.Column="1"></TextBox>
+
+            <Label Grid.Row="2">Date Of Birth :</Label>
+            <DatePicker SelectedDate="{Binding Model.RegistrationData.DateOfBirth}" Grid.Row="2" Grid.Column="1"></DatePicker>
+
+            <Label Grid.Row="3">Sex :</Label>
+            <ComboBox x:Name="sexInput"
+                      SelectedValue="{Binding Model.RegistrationData.Sex}"
+                      Grid.Row="3" Grid.Column="1"></ComboBox>
+
+            <Label Grid.Row="4">Phone Number :</Label>
+            <TextBox Text="{Binding Model.RegistrationData.PhoneNumber}" Grid.Row="4" Grid.Column="1"></TextBox>
+
+            <Label Grid.Row="5">Protection Level :</Label>
+            <Slider Value="{Binding Model.RegistrationData.ProtectionLevel}" Grid.Row="5" Grid.Column="1" Minimum="1" Maximum="3" TickFrequency="1" TickPlacement="Both"></Slider>
+
+            <Label Grid.Row="6">Conditions :</Label>
+            <StackPanel Grid.Row="6" Grid.Column="1">
+                <TextBlock TextWrapping="Wrap"><Run Text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin nisi libero, ornare eget dignissim vitae, accumsan sed libero. Aliquam sagittis lacus a velit accumsan aliquam. Nunc feugiat tellus vitae erat molestie, a facilisis diam molestie. Ut eu ante id est fringilla rutrum. Nulla vestibulum, nibh nec pretium malesuada, nisl sapien consectetur metus, in volutpat mauris justo eget diam. Morbi sed nibh at nibh tincidunt interdum ac vel leo. Proin odio dolor, sodales id sollicitudin sit amet, faucibus ac urna."/></TextBlock>
+                <CheckBox IsChecked="{Binding Model.RegistrationData.IsAccepted}" Margin="0 10 0 0" Content="I accept"/>
+                <TextBlock>
+                    <TextBlock.Text>
+                        <MultiBinding StringFormat="{}{0} {1}">
+                            <Binding Path="Text" ElementName="firstNameInput"></Binding>
+                            <Binding Path="Text" ElementName="lastNameInput"></Binding>
+                        </MultiBinding>
+                    </TextBlock.Text>
+                </TextBlock>
+            </StackPanel>
+        </Grid>
+    </DockPanel>
+</UserControl>

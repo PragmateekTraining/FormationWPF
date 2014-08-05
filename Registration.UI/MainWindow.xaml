@@ -1,0 +1,21 @@
+﻿<Window x:Class="MVVM.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:system="clr-namespace:System;assembly=mscorlib"
+        xmlns:model="clr-namespace:Model;assembly=Model"
+        xmlns:mvvm="clr-namespace:MVVM"
+        Title="MainWindow" SizeToContent="Height">
+    <mvvm:RegistrationForm x:Name="registrationForm">
+        <!--<mvvm:RegistrationForm.Model>
+            <mvvm:RegistrationViewModel>
+                <mvvm:RegistrationViewModel.RegistrationData>
+                    <model:RegistrationData FirstName="..." LastName="..." DateOfBirth="2010-04-10">
+                    </model:RegistrationData>
+                </mvvm:RegistrationViewModel.RegistrationData>
+                <mvvm:RegistrationViewModel.CommitData>
+                    <mvvm:CommitDataCommand></mvvm:CommitDataCommand>
+                </mvvm:RegistrationViewModel.CommitData>
+            </mvvm:RegistrationViewModel>
+        </mvvm:RegistrationForm.Model>-->
+    </mvvm:RegistrationForm>
+</Window>
