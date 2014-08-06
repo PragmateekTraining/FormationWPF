@@ -25,20 +25,7 @@ namespace MVVM
         {
             InitializeComponent();
 
-            RegistrationViewModel model = new RegistrationViewModel();
-            RegistrationData data = new RegistrationData
-            {
-                FirstName = "...",
-                LastName = "..."
-            };
-
-            model.RegistrationData = data;
-
-            model.CommitData = new CommitDataCommand(data);
-
-            registrationForm.Model = model;
-
-            // this.Content = new RegistrationForm();
+            registrationForm.Model = new RegistrationViewModel();
         }
     }
 }

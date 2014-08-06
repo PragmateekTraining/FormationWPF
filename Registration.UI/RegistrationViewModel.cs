@@ -1,11 +1,5 @@
 ﻿using Model;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
-using System.Windows.Data;
 using System.Windows.Input;
 
 namespace MVVM
@@ -16,28 +10,35 @@ namespace MVVM
 
         public ICommand CommitData { get; set; }
 
-        /*/// <summary>
-        /// izaondoiazndaiodnaizndaziond
-        /// </summary>
-        public ICommand CD
+        public ICommand CommitDataWithRelay { get; set; }
+
+        public RegistrationViewModel()
         {
-            get
+            RegistrationData data = new RegistrationData
             {
-                /// Generte commid command
-                return new DelegateCommand(
-                    parameter =>
-                    {
-                        RegistrationData data = (RegistrationData)parameter;
+                FirstName = "...",
+                LastName = "..."
+            };
 
-                        MessageBox.Show(string.Format("Hello {0} {1}.", data.FirstName, data.LastName));
-                    }
-                ,parameter => (parameter as RegistrationData).IsAccepted
-            }
-        }*/
+            RegistrationData = data;
 
-        /*public void CommitData()
-        {
-            
-        }*/
+            CommitData = new CommitDataCommand(data);
+
+            RelayCommand commitDataWithRelay = new RelayCommand
+            (
+                () =>
+                {
+                    string title = data.Sex == Sex.Female ? "Ms. " :
+                                   data.Sex == Sex.Male ? "Mr. " :
+                                   "";
+
+                    MessageBox.Show(string.Format("Hello {0}{1} {2}.", title, data.FirstName, data.LastName));
+                },
+                () => data != null && data.IsAccepted
+            );
+            data.PropertyChanged += delegate { commitDataWithRelay.RaiseCanExecuteChanged(); };
+
+            CommitDataWithRelay = commitDataWithRelay;
+        }
     }
 }

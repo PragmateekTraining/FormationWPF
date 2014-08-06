@@ -11,7 +11,7 @@ using System.Windows.Input;
 namespace MVVM
 {
     /// <summary>
-    /// ziodaziodnazodnazoidazdoazdn
+    /// 
     /// </summary>
     public class CommitDataCommand : ICommand
     {

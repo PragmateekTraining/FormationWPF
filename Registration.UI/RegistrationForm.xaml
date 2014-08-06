@@ -9,8 +9,10 @@
         <DockPanel DockPanel.Dock="Bottom" LastChildFill="False">
             <Button DockPanel.Dock="Right"
                     Margin="10" Padding="5"
-                    IsEnabled="{Binding Model.RegistrationData.IsAccepted}"
-                    Command="{Binding Model.CommitData}" CommandParameter="{Binding Model.RegistrationData}">OK</Button>
+                    Command="{Binding Model.CommitDataWithRelay}">OK Relay</Button>
+            <Button DockPanel.Dock="Right"
+                    Margin="10" Padding="5"
+                    Command="{Binding Model.CommitData}">OK</Button>
             <Button DockPanel.Dock="Right" Margin="10" Padding="5">Cancel</Button>
         </DockPanel>
         <Grid>
