@@ -165,6 +165,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EnumsBinding", "EnumsBindin
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tooltips", "Tooltips\Tooltips.csproj", "{4232662D-7555-4B6D-A2BC-6FF72A6233BE}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FocusedElementSample", "FocusedElementSample\FocusedElementSample.csproj", "{84E9A078-B3A1-4F34-B494-053F6A7E71E3}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -491,6 +493,10 @@ Global
 		{4232662D-7555-4B6D-A2BC-6FF72A6233BE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4232662D-7555-4B6D-A2BC-6FF72A6233BE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4232662D-7555-4B6D-A2BC-6FF72A6233BE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{84E9A078-B3A1-4F34-B494-053F6A7E71E3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{84E9A078-B3A1-4F34-B494-053F6A7E71E3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{84E9A078-B3A1-4F34-B494-053F6A7E71E3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{84E9A078-B3A1-4F34-B494-053F6A7E71E3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

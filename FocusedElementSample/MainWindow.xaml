@@ -1,0 +1,10 @@
+﻿<Window x:Class="FocusedElementSample.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="MainWindow" Height="350" Width="525">
+    <StackPanel FocusManager.FocusedElement="{x:Reference secondInput}">
+        <TextBox>One</TextBox>
+        <TextBox x:Name="secondInput">Two</TextBox>
+        <TextBox>Three</TextBox>
+    </StackPanel>
+</Window>
