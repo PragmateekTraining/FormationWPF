@@ -7,9 +7,16 @@ namespace DataBinding
 {
     public class SpreadConverter : IValueConverter
     {
+        public long? Max { get; set; }
+
         public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
         {
-            return int.Parse((string)parameter) - (int)value;
+            long? reference = parameter != null ? System.Convert.ToInt64(parameter) : Max;
+
+            if (reference == null)
+                return DependencyProperty.UnsetValue;
+
+            return reference - System.Convert.ToInt64(value);
         }
 
         public object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)

@@ -7,12 +7,9 @@
     <Window.Resources>
         <vm:NameViewModel x:Key="NameViewModel" />
     </Window.Resources>
-    <Grid>
-        <Grid.RowDefinitions>
-            <RowDefinition></RowDefinition>
-            <RowDefinition></RowDefinition>
-        </Grid.RowDefinitions>
+    <StackPanel>
         <local:NameView Model="{StaticResource NameViewModel}" />
-        <local:CharactersCountView Grid.Row="1"></local:CharactersCountView>
-    </Grid>
+        <local:CharactersCountView></local:CharactersCountView>
+        <local:FontView></local:FontView>
+    </StackPanel>
 </Window>
