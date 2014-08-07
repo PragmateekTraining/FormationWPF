@@ -2,7 +2,12 @@
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         Title="MainWindow" Height="350" Width="525">
-<Grid DataContext="Hello">
-    <TextBlock Text="{Binding}"></TextBlock>
-</Grid>
+    <StackPanel x:Name="root">
+        <TextBlock Text="{Binding Text}"></TextBlock>
+        <TextBlock Text="{Binding TextClick}"></TextBlock>
+        <Grid DataContext="Hello">
+            <TextBlock Text="{Binding}"></TextBlock>
+        </Grid>
+        <Button Click="Button_Click">Go</Button>
+    </StackPanel>
 </Window>

@@ -20,9 +20,21 @@ namespace DataContext
     /// </summary>
     public partial class MainWindow : Window
     {
+        public string Text { get; set; }
+        public string TextClick { get; set; }
+
         public MainWindow()
         {
             InitializeComponent();
+
+            root.DataContext = this;
+
+            Text = "Text";
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            TextClick = "Click";
         }
     }
 }

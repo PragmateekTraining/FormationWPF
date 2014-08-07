@@ -3,16 +3,20 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         Title="MainWindow"
         SizeToContent="WidthAndHeight">
-    <Grid>
+    <Grid Width="600">
         <Grid.ColumnDefinitions>
             <ColumnDefinition></ColumnDefinition>
-                <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
         </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="300"></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
         <StackPanel Grid.Column="0">
             <TextBlock Text="Before rotated text"></TextBlock>
             <TextBlock Text="Some text rotated with a layout transform">
                 <TextBlock.LayoutTransform>
-                    <RotateTransform Angle="10"></RotateTransform>
+                    <RotateTransform Angle="{Binding Value,ElementName=angleInput}"></RotateTransform>
                 </TextBlock.LayoutTransform>
             </TextBlock>
             <TextBlock Text="After rotated text"></TextBlock>
@@ -27,10 +31,11 @@
             </Border>-->
             <TextBlock Text="Some text rotated with a render transform">
                 <TextBlock.RenderTransform>
-                    <RotateTransform Angle="10"></RotateTransform>
+                    <RotateTransform Angle="{Binding Value,ElementName=angleInput}"></RotateTransform>
                 </TextBlock.RenderTransform>
             </TextBlock>
             <TextBlock Text="After rotated text"></TextBlock>
         </StackPanel>
+        <Slider x:Name="angleInput" Grid.Row="1" Grid.ColumnSpan="2" Minimum="-180" Maximum="+180" Value="0"></Slider>
     </Grid>
 </Window>
