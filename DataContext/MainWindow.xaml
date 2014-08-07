@@ -3,6 +3,9 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         Title="MainWindow" Height="350" Width="525">
     <StackPanel x:Name="root">
+        <!--<StackPanel.DataContext>
+            <Binding RelativeSource="{RelativeSource AncestorType=Window}"></Binding>
+        </StackPanel.DataContext>-->
         <TextBlock Text="{Binding Text}"></TextBlock>
         <TextBlock Text="{Binding TextClick}"></TextBlock>
         <Grid DataContext="Hello">
