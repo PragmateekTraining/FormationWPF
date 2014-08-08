@@ -167,6 +167,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tooltips", "Tooltips\Toolti
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FocusedElementSample", "FocusedElementSample\FocusedElementSample.csproj", "{84E9A078-B3A1-4F34-B494-053F6A7E71E3}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomControlSample", "CustomControlSample\CustomControlSample.csproj", "{733B4764-34E4-48E3-8C71-67E6C747727A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -497,6 +499,10 @@ Global
 		{84E9A078-B3A1-4F34-B494-053F6A7E71E3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{84E9A078-B3A1-4F34-B494-053F6A7E71E3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{84E9A078-B3A1-4F34-B494-053F6A7E71E3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{733B4764-34E4-48E3-8C71-67E6C747727A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{733B4764-34E4-48E3-8C71-67E6C747727A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{733B4764-34E4-48E3-8C71-67E6C747727A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{733B4764-34E4-48E3-8C71-67E6C747727A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
