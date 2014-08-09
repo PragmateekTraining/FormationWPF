@@ -4,15 +4,53 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:system="clr-namespace:System;assembly=mscorlib"
+             xmlns:io="clr-namespace:System.IO;assembly=mscorlib"
+             xmlns:text="clr-namespace:System.Text.RegularExpressions;assembly=System"
              mc:Ignorable="d" 
              d:DesignHeight="300" d:DesignWidth="300">
     <UserControl.Resources>
         <ObjectDataProvider x:Key="newGuidProvider" ObjectType="system:Guid" MethodName="NewGuid"></ObjectDataProvider>
+        <ObjectDataProvider x:Key="nextRandomNumberProvider" ObjectType="system:Random" MethodName="Next"></ObjectDataProvider>
+        <ObjectDataProvider x:Key="numberProvider" ObjectType="system:Math" MethodName="Cos">
+            <ObjectDataProvider.MethodParameters>
+                <system:Int32>42</system:Int32>
+            </ObjectDataProvider.MethodParameters>
+        </ObjectDataProvider>
+        <ObjectDataProvider x:Key="regexProvider" ObjectType="text:Regex" MethodName="IsMatch">
+            <ObjectDataProvider.ConstructorParameters>
+                <system:String>^(?i)[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$</system:String>
+            </ObjectDataProvider.ConstructorParameters>
+            <ObjectDataProvider.MethodParameters>
+                <x:Static MemberType="system:String" Member="Empty"></x:Static>
+            </ObjectDataProvider.MethodParameters>
+        </ObjectDataProvider>
+        <ObjectDataProvider x:Key="fileProvider" ObjectType="io:Directory" MethodName="GetFileSystemEntries">
+            <ObjectDataProvider.MethodParameters>
+                <system:String>C:\</system:String>
+            </ObjectDataProvider.MethodParameters>
+        </ObjectDataProvider>
     </UserControl.Resources>
     <Grid>
         <StackPanel>
             <TextBox IsReadOnly="True" Text="{Binding Source={StaticResource newGuidProvider},Mode=OneWay,StringFormat='[&quot;{0}&quot;]'}"></TextBox>
             <TextBox IsReadOnly="True" Text="{Binding Source={StaticResource newGuidProvider},Mode=OneWay,StringFormat='&lt;&quot;{0}&quot;&gt;'}"></TextBox>
+            <TextBlock Text="{Binding Source={StaticResource nextRandomNumberProvider}}"></TextBlock>
+            <TextBlock Text="{Binding Source={StaticResource nextRandomNumberProvider}}"></TextBlock>
+            <TextBlock Text="{Binding Source={StaticResource numberProvider}}"></TextBlock>
+            <TextBox Text="{Binding MethodParameters[0],
+                                    Source={StaticResource regexProvider},
+                                    BindsDirectlyToSource=True,
+                                    Mode=OneWayToSource,
+                                    UpdateSourceTrigger=PropertyChanged}"></TextBox>
+            <!--<TextBox Text="{Binding MethodParameters[0],Source={StaticResource regexProvider},BindsDirectlyToSource=True,Mode=OneWayToSource}"></TextBox>-->
+            <TextBlock Text="{Binding Source={StaticResource regexProvider}}"></TextBlock>
+            <TextBox Text="{Binding MethodParameters[0],
+                                    Source={StaticResource fileProvider},
+                                    BindsDirectlyToSource=True,
+                                    Mode=OneWayToSource,
+                                    FallbackValue='C:',
+                                    UpdateSourceTrigger=PropertyChanged}"></TextBox>
+            <ListBox ItemsSource="{Binding Source={StaticResource fileProvider}}"></ListBox>
         </StackPanel>
     </Grid>
 </UserControl>
