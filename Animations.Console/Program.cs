@@ -10,7 +10,7 @@ using System;
 
 namespace Animations.Console
 {
-    class Line : Button
+    class Line : DependencyObject
     {
         public double Length
         {
@@ -28,45 +28,45 @@ namespace Animations.Console
         }
     }
 
-    class MyWindow : Window
-    {
-        Storyboard storyboard;
+    //class MyWindow : Window
+    //{
+    //    Storyboard storyboard;
 
-        public MyWindow()
-        {
-            this.Content = new Button { Content = "123449689189198" };
+    //    public MyWindow()
+    //    {
+    //        this.Content = new Button { Content = "123449689189198" };
 
-            this.Loaded += (s, a) =>
-                {
-                    DoubleAnimation animation = new DoubleAnimation
-                    {
-                        Duration = new Duration(sys.TimeSpan.FromSeconds(1)),
-                        From = 0,
-                        To = 50
-                    };
+    //        this.Loaded += (s, a) =>
+    //            {
+    //                DoubleAnimation animation = new DoubleAnimation
+    //                {
+    //                    Duration = new Duration(sys.TimeSpan.FromSeconds(1)),
+    //                    From = 0,
+    //                    To = 50
+    //                };
 
-                    animation.EasingFunction = new SineEase();
+    //                animation.EasingFunction = new SineEase();
 
-                    Line line = new Line();
+    //                Line line = new Line();
 
-                    Storyboard.SetTarget(animation, line);
-                    // Storyboard.SetTarget(animation, this.Content as DependencyObject);
-                    Storyboard.SetTargetProperty(animation, new PropertyPath("Length"));
-                    // Storyboard.SetTargetProperty(animation, new PropertyPath("Width"));
+    //                Storyboard.SetTarget(animation, line);
+    //                // Storyboard.SetTarget(animation, this.Content as DependencyObject);
+    //                Storyboard.SetTargetProperty(animation, new PropertyPath("Length"));
+    //                // Storyboard.SetTargetProperty(animation, new PropertyPath("Width"));
 
-                    storyboard = new Storyboard
-                    {
-                        Duration = new Duration(sys.TimeSpan.FromSeconds(1)),
-                        AutoReverse = true,
-                        RepeatBehavior = RepeatBehavior.Forever,
-                    };
+    //                storyboard = new Storyboard
+    //                {
+    //                    Duration = new Duration(sys.TimeSpan.FromSeconds(1)),
+    //                    AutoReverse = true,
+    //                    RepeatBehavior = RepeatBehavior.Forever,
+    //                };
 
-                    storyboard.Children.Add(animation);
+    //                storyboard.Children.Add(animation);
 
-                    storyboard.Begin();
-                };
-        }
-    }
+    //                storyboard.Begin();
+    //            };
+    //    }
+    //}
 
     class Program
     {
