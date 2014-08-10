@@ -171,6 +171,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomControlSample", "Cust
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DispatcherTimerSample", "DispatcherTimerSample\DispatcherTimerSample.csproj", "{66D3FAE1-FCE7-48BD-99FA-0EF371CD87C5}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VisualStateManagerSample", "VisualStateManagerSample\VisualStateManagerSample.csproj", "{C42F1044-7FB3-4C5C-9596-A81ABD1B2977}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -509,6 +511,10 @@ Global
 		{66D3FAE1-FCE7-48BD-99FA-0EF371CD87C5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{66D3FAE1-FCE7-48BD-99FA-0EF371CD87C5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{66D3FAE1-FCE7-48BD-99FA-0EF371CD87C5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C42F1044-7FB3-4C5C-9596-A81ABD1B2977}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C42F1044-7FB3-4C5C-9596-A81ABD1B2977}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C42F1044-7FB3-4C5C-9596-A81ABD1B2977}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C42F1044-7FB3-4C5C-9596-A81ABD1B2977}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
