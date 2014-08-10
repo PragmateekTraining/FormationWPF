@@ -3,6 +3,11 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         Loaded="Window_Loaded_1"
         Title="MainWindow" Height="350" Width="525">
+    <Window.Icon>
+        <BitmapImage UriSource="/Assets;component/images/icons/play.png"
+                     DecodePixelWidth="20"
+                     DecodePixelHeight="20"></BitmapImage>
+    </Window.Icon>
     <Grid>
         <Button Click="Button_Click_1"></Button>
     </Grid>
