@@ -1,0 +1,34 @@
+﻿<Window x:Class="TreeViewSample.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:local="clr-namespace:TreeViewSample"
+        Title="MainWindow" Height="350" Width="525">
+    <Window.Resources>
+        <Style x:Key="imageStyle" TargetType="{x:Type Image}">
+            <Setter Property="Width" Value="16"></Setter>
+            <Setter Property="Height" Value="16"></Setter>
+            <Setter Property="Margin" Value="0, 0, 5, 0"></Setter>
+            <Setter Property="RenderOptions.BitmapScalingMode" Value="HighQuality"></Setter>
+        </Style>
+    </Window.Resources>
+    <Grid>
+        <TreeView x:Name="tree">
+            <TreeView.Resources>                
+                <DataTemplate DataType="{x:Type local:File}">
+                    <DockPanel>
+                        <Image Source="/Assets;component/images/icons/file.png" Style="{StaticResource imageStyle}" DockPanel.Dock="Left"></Image>
+                        <TextBlock VerticalAlignment="Bottom" Text="{Binding Name}" />
+                    </DockPanel>
+                </DataTemplate>
+
+                <HierarchicalDataTemplate DataType="{x:Type local:Directory}"
+                                          ItemsSource="{Binding Elements}">
+                    <DockPanel>
+                        <Image Source="/Assets;component/images/icons/folder.png" Style="{StaticResource imageStyle}" DockPanel.Dock="Left"></Image>
+                        <TextBlock VerticalAlignment="Bottom" FontWeight="Bold" Text="{Binding Name}" MouseLeftButtonDown="TextBlock_MouseDown" />
+                    </DockPanel>
+                </HierarchicalDataTemplate>
+            </TreeView.Resources>
+        </TreeView>
+    </Grid>
+</Window>

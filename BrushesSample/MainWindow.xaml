@@ -39,9 +39,9 @@
         </Rectangle>
         <Rectangle Width="200" Height="100">
             <Rectangle.Fill>
-                <RadialGradientBrush GradientOrigin="0.25,0.25">
+                <RadialGradientBrush GradientOrigin="-0.25,-0.25">
                     <GradientStop Color="Red" Offset="0"></GradientStop>
-                    <GradientStop Color="Green" Offset="0.5"></GradientStop>
+                    <GradientStop Color="Green" Offset="0.7"></GradientStop>
                     <GradientStop Color="Blue" Offset="1"></GradientStop>
                 </RadialGradientBrush>
             </Rectangle.Fill>
