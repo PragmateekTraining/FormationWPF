@@ -1,0 +1,10 @@
+﻿<Window x:Class="ExceptionsSample.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:local="clr-namespace:ExceptionsSample"
+        Title="MainWindow" Height="350" Width="525">
+    <DockPanel>
+        <CheckBox IsChecked="{Binding Path=(local:App.HandleThem),Mode=OneWayToSource}" DockPanel.Dock="Top">Handle exceptions</CheckBox>
+        <Button Click="Button_Click">Boom!</Button>
+    </DockPanel>
+</Window>
