@@ -1,29 +1,15 @@
 ﻿<Window x:Class="DispatcherTimerSample.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:local="clr-namespace:DispatcherTimerSample"
         Title="MainWindow"
         Width="500"
         Height="500">
     <Grid>
-        <Grid.RowDefinitions>
-            <RowDefinition></RowDefinition>
-            <RowDefinition></RowDefinition>
-        </Grid.RowDefinitions>
-        <Ellipse Stroke="Black" StrokeThickness="10" Height="500" Grid.RowSpan="2"></Ellipse>
-        <Rectangle Width="10" Fill="Black" Height="100" VerticalAlignment="Bottom" RenderTransformOrigin="0.5,1">
-            <Rectangle.RenderTransform>
-                <RotateTransform x:Name="hourHandRotation"></RotateTransform>
-            </Rectangle.RenderTransform>
-        </Rectangle>
-        <Rectangle Width="7" Fill="Black" Height="150" VerticalAlignment="Bottom" RenderTransformOrigin="0.5,1">
-            <Rectangle.RenderTransform>
-                <RotateTransform x:Name="minuteHandRotation"></RotateTransform>
-            </Rectangle.RenderTransform>
-        </Rectangle>
-        <Rectangle Width="3" Fill="Black" Height="200" VerticalAlignment="Bottom" RenderTransformOrigin="0.5,1">
-            <Rectangle.RenderTransform>
-                <RotateTransform x:Name="secondHandRotation"></RotateTransform>
-            </Rectangle.RenderTransform>
-        </Rectangle>
+        <local:ClockView>
+            <local:ClockView.Model>
+                <local:ClockViewModel></local:ClockViewModel>
+            </local:ClockView.Model>
+        </local:ClockView>
     </Grid>
 </Window>
