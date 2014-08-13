@@ -1,0 +1,10 @@
+﻿<Window x:Class="AnimationsSample.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:local="clr-namespace:AnimationsSample"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="MainWindow" Height="350" Width="525">
+    <StackPanel>
+        <local:LEDChaseView></local:LEDChaseView>
+        <local:SmoothLEDChaseView></local:SmoothLEDChaseView>
+    </StackPanel>
+</Window>
