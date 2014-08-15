@@ -185,6 +185,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ViewBoxSample", "ViewBoxSam
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AnimationsSample", "AnimationsSample\AnimationsSample.csproj", "{447BAC9B-61E5-4217-8C31-302976AEFBA2}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CommandBindingsSample", "CommandBindingsSample\CommandBindingsSample.csproj", "{E7C371E7-A224-4E06-AA73-D6875C590298}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -551,6 +553,10 @@ Global
 		{447BAC9B-61E5-4217-8C31-302976AEFBA2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{447BAC9B-61E5-4217-8C31-302976AEFBA2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{447BAC9B-61E5-4217-8C31-302976AEFBA2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E7C371E7-A224-4E06-AA73-D6875C590298}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E7C371E7-A224-4E06-AA73-D6875C590298}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E7C371E7-A224-4E06-AA73-D6875C590298}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E7C371E7-A224-4E06-AA73-D6875C590298}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

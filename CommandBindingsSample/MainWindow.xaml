@@ -1,0 +1,40 @@
+﻿<Window x:Class="CommandBindingsSample.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:xctk="http://schemas.xceed.com/wpf/xaml/toolkit"
+        Title="MainWindow" Height="350" Width="525">
+    <Window.CommandBindings>
+        <CommandBinding Command="{x:Static ComponentCommands.MoveUp}"
+                        CanExecute="CommandUp_CanExecute"
+                        Executed="CommandUp_Executed"></CommandBinding>
+        <CommandBinding Command="{x:Static ComponentCommands.MoveDown}"
+                        CanExecute="CommandDown_CanExecute"
+                        Executed="CommandDown_Executed"></CommandBinding>
+    </Window.CommandBindings>
+    <Window.InputBindings>
+        <KeyBinding Modifiers="Control" Key="U"
+                    Command="{x:Static ComponentCommands.MoveUp}"></KeyBinding>
+        <KeyBinding Gesture="Control+D"
+                    Command="{x:Static ComponentCommands.MoveDown}"></KeyBinding>
+    </Window.InputBindings>
+    <DockPanel>
+        <StackPanel DockPanel.Dock="Top">
+            <xctk:IntegerUpDown x:Name="input" Value="0"></xctk:IntegerUpDown>
+            <TextBlock Text="UP">
+                <TextBlock.InputBindings>
+                    <MouseBinding MouseAction="LeftDoubleClick"
+                                  Command="{x:Static ComponentCommands.MoveUp}"></MouseBinding>
+                </TextBlock.InputBindings>
+            </TextBlock>
+            <TextBlock Text="DOWN">
+                <TextBlock.InputBindings>
+                    <MouseBinding MouseAction="LeftDoubleClick"
+                                  Command="{x:Static ComponentCommands.MoveDown}"></MouseBinding>
+                </TextBlock.InputBindings>
+            </TextBlock>
+        </StackPanel>
+        <ScrollViewer>
+            <TextBlock x:Name="log"></TextBlock>
+        </ScrollViewer>
+    </DockPanel>
+</Window>
