@@ -187,6 +187,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AnimationsSample", "Animati
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CommandBindingsSample", "CommandBindingsSample\CommandBindingsSample.csproj", "{E7C371E7-A224-4E06-AA73-D6875C590298}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AsyncEventHandlerSample", "AsyncEventHandlerSample\AsyncEventHandlerSample.csproj", "{935B3166-0584-4FD1-BBEF-A849A2BF5A81}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -557,6 +559,10 @@ Global
 		{E7C371E7-A224-4E06-AA73-D6875C590298}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E7C371E7-A224-4E06-AA73-D6875C590298}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E7C371E7-A224-4E06-AA73-D6875C590298}.Release|Any CPU.Build.0 = Release|Any CPU
+		{935B3166-0584-4FD1-BBEF-A849A2BF5A81}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{935B3166-0584-4FD1-BBEF-A849A2BF5A81}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{935B3166-0584-4FD1-BBEF-A849A2BF5A81}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{935B3166-0584-4FD1-BBEF-A849A2BF5A81}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

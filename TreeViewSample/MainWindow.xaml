@@ -13,7 +13,7 @@
     </Window.Resources>
     <Grid>
         <TreeView x:Name="tree">
-            <TreeView.Resources>                
+            <TreeView.Resources>
                 <DataTemplate DataType="{x:Type local:File}">
                     <DockPanel>
                         <Image Source="/Assets;component/images/icons/file.png" Style="{StaticResource imageStyle}" DockPanel.Dock="Left"></Image>

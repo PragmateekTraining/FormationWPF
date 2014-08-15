@@ -8,13 +8,13 @@
              d:DesignHeight="300" d:DesignWidth="300">
     <UserControl.Resources>
         <local:SpreadConverter x:Key="spreadConverterNoMax"></local:SpreadConverter>
-        <local:SpreadConverter x:Key="spreadConverterWithMax" Max="240"></local:SpreadConverter>
+        <local:SpreadConverter x:Key="spreadConverterWithMax" Max="140"></local:SpreadConverter>
     </UserControl.Resources>
     <StackPanel>
         <TextBlock>Your message :</TextBlock>
         <TextBox x:Name="input" VerticalAlignment="Center" AcceptsReturn="True" Height="100"></TextBox>
         <TextBlock Text="{Binding ElementName=input,Path=Text.Length}" Grid.Column="1" VerticalAlignment="Center"></TextBlock>
-        <TextBlock Text="{Binding ElementName=input,Path=Text.Length,Converter={StaticResource spreadConverterNoMax},ConverterParameter=240,StringFormat='({0} more to go)',FallbackValue='-'}"></TextBlock>
+        <TextBlock Text="{Binding ElementName=input,Path=Text.Length,Converter={StaticResource spreadConverterNoMax},ConverterParameter=140,StringFormat='({0} more to go)',FallbackValue='-'}"></TextBlock>
         <TextBlock Text="{Binding ElementName=input,Path=Text.Length,Converter={StaticResource spreadConverterNoMax},StringFormat='({0} more to go)',FallbackValue='-'}"></TextBlock>
         <TextBlock Text="{Binding ElementName=input,Path=Text.Length,Converter={StaticResource spreadConverterWithMax},StringFormat='({0} more to go)',FallbackValue='-'}"></TextBlock>
         <TextBlock Text="{Binding ElementName=input,Path=Text.Length,Converter={StaticResource spreadConverterWithMax},ConverterParameter=0,StringFormat='({0} more to go)',FallbackValue='-'}"></TextBlock>
