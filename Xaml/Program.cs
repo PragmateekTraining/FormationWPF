@@ -6,7 +6,7 @@ namespace Xaml
     {
         static void Main(string[] args)
         {
-            // new LibraryManager().Run();
+            //new LibraryManager().Run();
             new XamlCalculator().Run();
 
             Console.ReadLine();

@@ -15,9 +15,9 @@ namespace Xaml
 
             MatchCollection matches = regex.Matches(operation);
 
-            Double leftOperand = Double.Parse(matches[0].Groups[1].Value);
-            String @operator = matches[0].Groups[2].Value;
-            Double rightOperand = Double.Parse(matches[0].Groups[3].Value);
+            double leftOperand = Double.Parse(matches[0].Groups[1].Value);
+            string @operator = matches[0].Groups[2].Value;
+            double rightOperand = Double.Parse(matches[0].Groups[3].Value);
 
             switch (@operator)
             {
@@ -36,7 +36,7 @@ namespace Xaml
             }
         }
 
-        public override Object ProvideValue(IServiceProvider serviceProvider)
+        public override object ProvideValue(IServiceProvider serviceProvider)
         {
             return result;
         }
@@ -44,7 +44,7 @@ namespace Xaml
 
     public class Result
     {
-        public Double Value { get; set; }
+        public double Value { get; set; }
     }
 
     internal class XamlCalculator
