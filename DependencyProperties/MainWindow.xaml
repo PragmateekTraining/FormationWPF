@@ -8,5 +8,8 @@
         <TextBlock>Type something in:</TextBlock>
         <TextBox Name="tb1" Text="..." />
         <TextBox Name="tb2" Text="{Binding ElementName=tb1,Path=Text,UpdateSourceTrigger=PropertyChanged}" />
+        <StackPanel TextElement.Foreground="Blue" TextElement.FontFamily="Wingdings">
+            <TextBlock>Inner StackPanel</TextBlock>
+        </StackPanel>
     </StackPanel>
 </Window>
