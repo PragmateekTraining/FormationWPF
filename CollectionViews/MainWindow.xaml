@@ -5,12 +5,13 @@
         Title="MainWindow" Height="350" Width="525">
     <DockPanel>
         <Button DockPanel.Dock="Bottom" Click="Button_Click">Sort</Button>
+        <TextBlock DockPanel.Dock="Bottom" Text="{Binding Fruits/}"></TextBlock>
         <Grid>
             <Grid.ColumnDefinitions>
                 <ColumnDefinition></ColumnDefinition>
                 <ColumnDefinition></ColumnDefinition>
             </Grid.ColumnDefinitions>
-            <ListBox x:Name="list" ItemsSource="{Binding Fruits}" Grid.Column="0"></ListBox>
+            <ListBox x:Name="list" ItemsSource="{Binding Fruits}" IsSynchronizedWithCurrentItem="True" Grid.Column="0"></ListBox>
             <ListBox ItemsSource="{Binding Fruits}" Grid.Column="1"></ListBox>
         </Grid>
     </DockPanel>
