@@ -1,0 +1,25 @@
+﻿<Window x:Class="ValueConverterSample.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:local="clr-namespace:ValueConverterSample"
+        xmlns:system="clr-namespace:System;assembly=mscorlib"
+        Title="MainWindow" Height="350" Width="525">
+    <Window.Resources>
+        <local:NumberToCharConverter x:Key="defaultConverter"></local:NumberToCharConverter>
+        <local:NumberToCharConverter x:Key="sharpConverter" Character="#"></local:NumberToCharConverter>
+    </Window.Resources>
+    <StackPanel>
+        <TextBlock Text="{Binding Evaluation}"></TextBlock>
+        <TextBlock Text="{Binding Evaluation,Converter={StaticResource defaultConverter}}"></TextBlock>
+        <TextBlock Text="{Binding Evaluation,Converter={StaticResource sharpConverter}}"></TextBlock>
+        <TextBlock Text="{Binding Evaluation,Converter={StaticResource defaultConverter},ConverterParameter=O}"></TextBlock>
+        <TextBlock Text="{Binding Evaluation,Converter={StaticResource sharpConverter},ConverterParameter='='}"></TextBlock>
+        <ComboBox SelectedValue="{Binding Evaluation,Converter={StaticResource defaultConverter}}">
+            <system:String>*</system:String>
+            <system:String>**</system:String>
+            <system:String>***</system:String>
+            <system:String>****</system:String>
+            <system:String>*****</system:String>
+        </ComboBox>
+    </StackPanel>
+</Window>

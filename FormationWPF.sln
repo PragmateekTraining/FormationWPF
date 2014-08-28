@@ -191,6 +191,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AsyncEventHandlerSample", "
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StatusBarSample", "StatusBarSample\StatusBarSample.csproj", "{95FA20B0-184A-413B-B0FF-AF443972B6C9}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ValueConverterSample", "ValueConverterSample\ValueConverterSample.csproj", "{89144D49-5AB9-4522-B791-E175C219858B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -569,6 +571,10 @@ Global
 		{95FA20B0-184A-413B-B0FF-AF443972B6C9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{95FA20B0-184A-413B-B0FF-AF443972B6C9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{95FA20B0-184A-413B-B0FF-AF443972B6C9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{89144D49-5AB9-4522-B791-E175C219858B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{89144D49-5AB9-4522-B791-E175C219858B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{89144D49-5AB9-4522-B791-E175C219858B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{89144D49-5AB9-4522-B791-E175C219858B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
