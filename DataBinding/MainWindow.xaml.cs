@@ -36,9 +36,16 @@ namespace DataBinding
             }
         }*/
 
+        public IDictionary<string, string> Dictionary { get; set; }
+
         public MainWindow()
         {
             InitializeComponent();
+
+            Dictionary = new Dictionary<string, string>
+            {
+                { "SomeExistingKey", "Some existing value" }
+            };
 
             DataContext = this;
         }

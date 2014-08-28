@@ -8,8 +8,20 @@
         <vm:NameViewModel x:Key="NameViewModel" />
     </Window.Resources>
     <StackPanel>
-        <local:NameView Model="{StaticResource NameViewModel}" />
-        <local:CharactersCountView></local:CharactersCountView>
-        <local:FontView></local:FontView>
+        <Expander Header="Potpourri">
+            <local:NameView Model="{StaticResource NameViewModel}" />
+        </Expander>
+        <Expander Header="With converter">
+            <local:CharactersCountView></local:CharactersCountView>
+        </Expander>
+        <Expander Header="Font">
+            <local:FontView></local:FontView>
+        </Expander>
+        <Expander Header="Dictionary fallback value">
+            <StackPanel>
+                <TextBlock Text="{Binding Dictionary[SomeExistingKey],FallbackValue='-- not found --'}"></TextBlock>
+                <TextBlock Text="{Binding Dictionary[SomeNonExistingKey],FallbackValue='-- not found --'}"></TextBlock>
+            </StackPanel>
+        </Expander>
     </StackPanel>
 </Window>
