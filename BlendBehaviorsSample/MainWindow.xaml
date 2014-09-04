@@ -1,0 +1,56 @@
+﻿<Window x:Class="BlendBehaviorsSample.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
+        xmlns:ei="http://schemas.microsoft.com/expression/2010/interactions"
+        xmlns:system="clr-namespace:System;assembly=mscorlib"
+        Title="MainWindow" Height="350" Width="525">
+    <StackPanel>
+        <Rectangle Width="100" Height="100"
+                   Fill="Red"
+                   Margin="20">
+            <i:Interaction.Triggers>
+                <i:EventTrigger EventName="MouseEnter">
+                    <ei:ChangePropertyAction PropertyName="Fill" Value="Green"></ei:ChangePropertyAction>
+                </i:EventTrigger>
+            </i:Interaction.Triggers>
+        </Rectangle>
+        <Rectangle Width="100" Height="100"
+                   Margin="20"
+                   Fill="Red"
+                   x:Name="square2">
+            <Rectangle.LayoutTransform>
+                <ScaleTransform x:Name="transform"></ScaleTransform>
+            </Rectangle.LayoutTransform>
+            <i:Interaction.Triggers>
+                <ei:DataTrigger Binding="{Binding ElementName=square2,Path=IsMouseOver}" Value="False">
+                    <ei:ChangePropertyAction PropertyName="Fill" Value="Red">
+                    </ei:ChangePropertyAction>
+                    <ei:ChangePropertyAction TargetName="transform" PropertyName="ScaleX">
+                        <ei:ChangePropertyAction.Value>
+                            <system:Double>1.0</system:Double>
+                        </ei:ChangePropertyAction.Value>
+                    </ei:ChangePropertyAction>
+                    <ei:ChangePropertyAction TargetName="transform" PropertyName="ScaleY">
+                        <ei:ChangePropertyAction.Value>
+                            <system:Double>1.0</system:Double>
+                        </ei:ChangePropertyAction.Value>
+                    </ei:ChangePropertyAction>
+                </ei:DataTrigger>
+                <ei:DataTrigger Binding="{Binding ElementName=square2,Path=IsMouseOver}" Value="True">
+                    <ei:ChangePropertyAction PropertyName="Fill" Value="Green"></ei:ChangePropertyAction>
+                    <ei:ChangePropertyAction TargetName="transform" PropertyName="ScaleX">
+                        <ei:ChangePropertyAction.Value>
+                            <system:Double>1.1</system:Double>
+                        </ei:ChangePropertyAction.Value>
+                    </ei:ChangePropertyAction>
+                    <ei:ChangePropertyAction TargetName="transform" PropertyName="ScaleY">
+                        <ei:ChangePropertyAction.Value>
+                            <system:Double>1.1</system:Double>
+                        </ei:ChangePropertyAction.Value>
+                    </ei:ChangePropertyAction>
+                </ei:DataTrigger>
+            </i:Interaction.Triggers>
+        </Rectangle>
+    </StackPanel>
+</Window>
