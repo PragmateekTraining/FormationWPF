@@ -1,0 +1,64 @@
+﻿<Window x:Class="BadUserControlDataContext.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:local="clr-namespace:BadUserControlDataContext"
+        Title="MainWindow"
+        SizeToContent="WidthAndHeight">
+    <Grid>
+        <ListBox ItemsSource="{Binding AllData}">
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <Border BorderBrush="Black" BorderThickness="1" Margin="5">
+                        <Grid ShowGridLines="True">
+                            <Grid.Resources>
+                                <Style TargetType="local:GoodUserControl1">
+                                    <Setter Property="VerticalAlignment" Value="Center"></Setter>
+                                </Style>
+                                <Style TargetType="local:GoodUserControl2">
+                                    <Setter Property="VerticalAlignment" Value="Center"></Setter>
+                                </Style>
+                                <Style TargetType="local:GoodUserControl3">
+                                    <Setter Property="VerticalAlignment" Value="Center"></Setter>
+                                </Style>
+                                <Style TargetType="local:BadUserControl">
+                                    <Setter Property="VerticalAlignment" Value="Center"></Setter>
+                                </Style>
+                                <Style TargetType="Label">
+                                    <Setter Property="VerticalAlignment" Value="Center"></Setter>
+                                </Style>
+                                <Style TargetType="TextBlock">
+                                    <Setter Property="VerticalAlignment" Value="Center"></Setter>
+                                </Style>
+                            </Grid.Resources>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition></ColumnDefinition>
+                                <ColumnDefinition></ColumnDefinition>
+                            </Grid.ColumnDefinitions>
+                            <Grid.RowDefinitions>
+                                <RowDefinition></RowDefinition>
+                                <RowDefinition></RowDefinition>
+                                <RowDefinition></RowDefinition>
+                                <RowDefinition></RowDefinition>
+                                <RowDefinition></RowDefinition>
+                            </Grid.RowDefinitions>
+                            <Label>TextBlock</Label>
+                            <TextBlock Text="{Binding}" Grid.Column="1"></TextBlock>
+
+                            <Label Grid.Row="1">Good #1</Label>
+                            <local:GoodUserControl1 SomeData="{Binding}" Grid.Row="1" Grid.Column="1"></local:GoodUserControl1>
+
+                            <Label Grid.Row="2">Good #2</Label>
+                            <local:GoodUserControl2 SomeData="{Binding}" Grid.Row="2" Grid.Column="1"></local:GoodUserControl2>
+
+                            <Label Grid.Row="3">Good #3</Label>
+                            <local:GoodUserControl3 SomeData="{Binding}" Grid.Row="3" Grid.Column="1"></local:GoodUserControl3>
+
+                            <Label Grid.Row="4">Bad</Label>
+                            <local:BadUserControl SomeData="{Binding}" Grid.Row="4" Grid.Column="1"></local:BadUserControl>
+                        </Grid>
+                    </Border>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
+    </Grid>
+</Window>
