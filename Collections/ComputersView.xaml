@@ -7,8 +7,7 @@
              mc:Ignorable="d" 
              d:DesignHeight="300" d:DesignWidth="300">
     <UserControl.Resources>
-        <!-- x:Key="computerTemplate" -->
-        <DataTemplate x:Key="computerTemplate" DataType="{x:Type model:Computer}">
+        <DataTemplate DataType="{x:Type model:Computer}">
             <Border BorderBrush="BlueViolet" BorderThickness="1" Margin="1">
                 <DockPanel>
                     <Image Source="/Assets;component/images/icons/computer.png" Width="48" Height="48" DockPanel.Dock="Left"></Image>
@@ -16,8 +15,7 @@
                 </DockPanel>
             </Border>
         </DataTemplate>
-        <!-- x:Key="laptopTemplate" -->
-        <DataTemplate x:Key="laptopTemplate" DataType="{x:Type model:Laptop}">
+        <DataTemplate DataType="{x:Type model:Laptop}">
             <Border BorderBrush="BlueViolet" BorderThickness="1" Margin="1">
                 <DockPanel>
                     <Image Source="/Assets;component/images/icons/laptop.png" Width="48" Height="48" DockPanel.Dock="Left"></Image>
@@ -26,7 +24,8 @@
             </Border>
         </DataTemplate>
     </UserControl.Resources>
-    <DockPanel x:Name="root" Background="AliceBlue">
+    <DockPanel DataContext="{Binding RelativeSource={RelativeSource AncestorType=UserControl}}"
+               Background="AliceBlue">
         <StackPanel DockPanel.Dock="Bottom">
             <Button Content="Add new computer" Margin="5" Click="AddComputerButton_Click"></Button>
             <TextBox Text="{Binding Model.SelectedComputer.Name,UpdateSourceTrigger=PropertyChanged}" BorderBrush="BlueViolet" BorderThickness="1" Margin="5" />
@@ -36,7 +35,9 @@
                 <ColumnDefinition></ColumnDefinition>
             </Grid.ColumnDefinitions>
             <ListBox ItemsSource="{Binding Model.Computers}"
-                 SelectedItem="{Binding Model.SelectedComputer,Mode=OneWayToSource}" BorderBrush="BlueViolet" BorderThickness="1" Margin="5" HorizontalContentAlignment="Stretch">
+                     SelectedItem="{Binding Model.SelectedComputer,Mode=OneWayToSource}"
+                     BorderBrush="BlueViolet" BorderThickness="1"
+                     Margin="5" HorizontalContentAlignment="Stretch">
             </ListBox>
         </Grid>
     </DockPanel>

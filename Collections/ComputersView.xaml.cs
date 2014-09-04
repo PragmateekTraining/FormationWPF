@@ -25,21 +25,13 @@ namespace Collections
 
         public ComputersViewModel Model
         {
-            get
-            {
-                return (ComputersViewModel)this.GetValue(ModelProperty);
-            }
-            set
-            {
-                this.SetValue(ModelProperty, value);
-            }
+            get { return (ComputersViewModel)this.GetValue(ModelProperty); }
+            set { this.SetValue(ModelProperty, value); }
         }
 
         public ComputersView()
         {
             InitializeComponent();
-
-            root.DataContext = this;
         }
 
         private void AddComputerButton_Click(object sender, RoutedEventArgs e)
