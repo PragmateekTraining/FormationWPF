@@ -13,15 +13,18 @@
                 <i:EventTrigger EventName="MouseEnter">
                     <ei:ChangePropertyAction PropertyName="Fill" Value="Green"></ei:ChangePropertyAction>
                 </i:EventTrigger>
+                <i:EventTrigger EventName="MouseLeave">
+                    <ei:ChangePropertyAction PropertyName="Fill" Value="Red"></ei:ChangePropertyAction>
+                </i:EventTrigger>
             </i:Interaction.Triggers>
         </Rectangle>
         <Rectangle Width="100" Height="100"
                    Margin="20"
                    Fill="Red"
                    x:Name="square2">
-            <Rectangle.LayoutTransform>
+            <Rectangle.RenderTransform>
                 <ScaleTransform x:Name="transform"></ScaleTransform>
-            </Rectangle.LayoutTransform>
+            </Rectangle.RenderTransform>
             <i:Interaction.Triggers>
                 <ei:DataTrigger Binding="{Binding ElementName=square2,Path=IsMouseOver}" Value="False">
                     <ei:ChangePropertyAction PropertyName="Fill" Value="Red">
