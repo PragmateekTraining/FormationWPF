@@ -4,7 +4,7 @@
         xmlns:local="clr-namespace:AttachedBehavior"
         Title="MainWindow" Height="350" Width="525">
     <StackPanel>
-        <Button local:KikooEffects.IsBlinking="{Binding IsChecked,ElementName=choiceInput}">Hello</Button>
+        <Button local:KikooEffects.IsBlinking="{Binding IsChecked,ElementName=choiceInput,Mode=OneWay}">Hello</Button>
         <CheckBox x:Name="choiceInput">Activate killer effect!</CheckBox>
     </StackPanel>
 </Window>

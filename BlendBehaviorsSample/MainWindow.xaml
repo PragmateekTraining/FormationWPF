@@ -70,7 +70,7 @@
                         <Expander Header="{Binding Header}">
                             <i:Interaction.Triggers>
                                 <i:EventTrigger EventName="Expanded">
-                                    <i:InvokeCommandAction Command="{Binding RelativeSource={RelativeSource AncestorType=ListBox},Path=DataContext.LoadDataCommand}" CommandParameter="{Binding}"></i:InvokeCommandAction>
+                                    <i:InvokeCommandAction Command="{Binding RelativeSource={RelativeSource AncestorType=ListBox},Path=DataContext.LoadDataCommand}" CommandParameter="{Binding}" />
                                 </i:EventTrigger>
                             </i:Interaction.Triggers>
                             <TextBlock Text="{Binding Content}"></TextBlock>
@@ -78,6 +78,16 @@
                     </DataTemplate>
                 </ListBox.ItemTemplate>
             </ListBox>
+        </TabItem>
+        <TabItem Header="Custom behavior">
+            <StackPanel>
+                <Button Content="Hello">
+                    <i:Interaction.Behaviors>
+                        <local:KikooEffectsBehavior x:Name="behavior" IsBlinking="false"></local:KikooEffectsBehavior>
+                    </i:Interaction.Behaviors>
+                </Button>
+                <CheckBox x:Name="choiceInput" IsChecked="{Binding ElementName=behavior,Path=IsBlinking,Mode=OneWayToSource}">Activate killer effect!</CheckBox>
+            </StackPanel>
         </TabItem>
     </TabControl>
 </Window>
