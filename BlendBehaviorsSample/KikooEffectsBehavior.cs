@@ -8,27 +8,37 @@ namespace BlendBehaviorsSample
 {
     public class KikooEffectsBehavior : Behavior<DependencyObject>
     {
-        private bool isBlinking;
+        //private bool isBlinking;
+        //public bool IsBlinking
+        //{
+        //    get { return isBlinking; }
+        //    set
+        //    {
+        //        if (value != isBlinking)
+        //        {
+        //            isBlinking = value;
+        //            OnBlinkValueChanged();
+        //        }
+        //    }
+        //}
+
         public bool IsBlinking
         {
-            get { return isBlinking; }
-            set
-            {
-                if (value != isBlinking)
-                {
-                    isBlinking = value;
-                    OnBlinkValueChanged();
-                }
-            }
+            get { return (bool)GetValue(IsBlinkingProperty); }
+            set { SetValue(IsBlinkingProperty, value); }
         }
+
+        public static readonly DependencyProperty IsBlinkingProperty = DependencyProperty.Register("IsBlinking", typeof(bool), typeof(KikooEffectsBehavior), new PropertyMetadata(OnBlinkValueChanged));        
 
         static readonly IDictionary<DependencyObject, Storyboard> storyboards = new Dictionary<DependencyObject, Storyboard>();
 
-        private void OnBlinkValueChanged()
+        private static void OnBlinkValueChanged(DependencyObject sender, DependencyPropertyChangedEventArgs _2)
         {
-            if (IsBlinking)
+            KikooEffectsBehavior @this = sender as KikooEffectsBehavior;
+
+            if (@this.IsBlinking)
             {
-                if (!storyboards.ContainsKey(AssociatedObject))
+                if (!storyboards.ContainsKey(@this.AssociatedObject))
                 {
                     DoubleAnimation animation = new DoubleAnimation
                     {
@@ -36,7 +46,7 @@ namespace BlendBehaviorsSample
                         To = 0
                     };
 
-                    Storyboard.SetTarget(animation, AssociatedObject);
+                    Storyboard.SetTarget(animation, @this.AssociatedObject);
                     Storyboard.SetTargetProperty(animation, new PropertyPath("Opacity"));
 
                     Storyboard storyboard = new Storyboard
@@ -47,16 +57,16 @@ namespace BlendBehaviorsSample
 
                     storyboard.Children.Add(animation);
 
-                    storyboards[AssociatedObject] = storyboard;
+                    storyboards[@this.AssociatedObject] = storyboard;
                 }
 
-                storyboards[AssociatedObject].Begin();
+                storyboards[@this.AssociatedObject].Begin();
             }
             else
             {
                 Storyboard storyboard = null;
 
-                if (storyboards.TryGetValue(AssociatedObject, out storyboard))
+                if (storyboards.TryGetValue(@this.AssociatedObject, out storyboard))
                 {
                     storyboard.Stop();
                 }

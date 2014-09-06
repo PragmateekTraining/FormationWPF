@@ -83,10 +83,10 @@
             <StackPanel>
                 <Button Content="Hello">
                     <i:Interaction.Behaviors>
-                        <local:KikooEffectsBehavior x:Name="behavior" IsBlinking="false"></local:KikooEffectsBehavior>
+                        <local:KikooEffectsBehavior x:Name="behavior" IsBlinking="{Binding ElementName=choiceInput,Path=IsChecked}"></local:KikooEffectsBehavior>
                     </i:Interaction.Behaviors>
                 </Button>
-                <CheckBox x:Name="choiceInput" IsChecked="{Binding ElementName=behavior,Path=IsBlinking,Mode=OneWayToSource}">Activate killer effect!</CheckBox>
+                <CheckBox x:Name="choiceInput">Activate killer effect!</CheckBox>
             </StackPanel>
         </TabItem>
     </TabControl>
