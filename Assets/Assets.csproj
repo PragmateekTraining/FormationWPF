@@ -61,6 +61,43 @@
     <Resource Include="images\icons\pause.png" />
     <Resource Include="images\icons\play.png" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\icons\none.png" />
+    <Resource Include="MoviesDB\Actors\BruceWillis.jpg" />
+    <Resource Include="MoviesDB\Actors\ChuckNorris1.jpg" />
+    <Resource Include="MoviesDB\Actors\ChuckNorris2.jpg" />
+    <Resource Include="MoviesDB\Actors\ChuckNorris3.jpg" />
+    <Resource Include="MoviesDB\Actors\ChuckNorris4.jpg" />
+    <Resource Include="MoviesDB\Actors\ChuckNorris5.jpg" />
+    <Resource Include="MoviesDB\Actors\ChuckNorris6.jpg" />
+    <Resource Include="MoviesDB\Actors\ChuckNorrisWithUzis.jpg" />
+    <Resource Include="MoviesDB\Actors\MelGibson.jpg" />
+    <Resource Include="MoviesDB\Actors\SylvesterStallone.jpg" />
+    <Resource Include="MoviesDB\Posters\CodeOfSilence.jpg" />
+    <Resource Include="MoviesDB\Posters\DeltaForce2.jpg" />
+    <Resource Include="MoviesDB\Posters\DieHard.jpg" />
+    <Resource Include="MoviesDB\Posters\DieHard2.jpg" />
+    <Resource Include="MoviesDB\Posters\DieHard3.jpg" />
+    <Resource Include="MoviesDB\Posters\DieHard4.jpg" />
+    <Resource Include="MoviesDB\Posters\DieHard5.jpg" />
+    <Resource Include="MoviesDB\Posters\EnterTheDragon.jpg" />
+    <Resource Include="MoviesDB\Posters\GameOfDeath.jpg" />
+    <Resource Include="MoviesDB\Posters\LethalWeapon.jpg" />
+    <Resource Include="MoviesDB\Posters\LethalWeapon2.jpg" />
+    <Resource Include="MoviesDB\Posters\LethalWeapon3.jpg" />
+    <Resource Include="MoviesDB\Posters\LethalWeapon4.jpg" />
+    <Resource Include="MoviesDB\Posters\MissingInAction.jpg" />
+    <Resource Include="MoviesDB\Posters\ReturnOfTheDragon.jpg" />
+    <Resource Include="MoviesDB\Posters\SilentRage.jpg" />
+    <Resource Include="MoviesDB\Posters\TheExpendables.jpg" />
+    <Resource Include="MoviesDB\Posters\TheExpendables2.jpg" />
+    <Resource Include="MoviesDB\Posters\TheExpendables3.jpg" />
+    <Resource Include="MoviesDB\Posters\TheOctagon.jpg" />
+    <Resource Include="MoviesDB\Posters\TheSixthSense.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="MoviesDB\Actors\Thumbs.db" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
