@@ -1,0 +1,13 @@
+﻿<Window x:Class="GlobalizationSample.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:local="clr-namespace:GlobalizationSample"
+        Title="MainWindow" Height="350" Width="525">
+    <Window.DataContext>
+        <local:MainViewModel></local:MainViewModel>
+    </Window.DataContext>
+    <StackPanel>
+        <ComboBox ItemsSource="{Binding Languages}" SelectedValue="{Binding CurrentLanguage,UpdateSourceTrigger=PropertyChanged}"></ComboBox>
+        <TextBlock Text="{DynamicResource WelcomeMessage}"></TextBlock>
+    </StackPanel>
+</Window>
