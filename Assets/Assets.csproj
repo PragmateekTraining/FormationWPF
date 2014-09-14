@@ -98,6 +98,17 @@
   <ItemGroup>
     <None Include="MoviesDB\Actors\Thumbs.db" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\flags\France.png" />
+    <Resource Include="images\flags\Spain.png" />
+    <Resource Include="images\flags\USA.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\flags\Germany.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\flags\Groland.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

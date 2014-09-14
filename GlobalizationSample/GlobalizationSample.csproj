@@ -62,6 +62,9 @@
     <Resource Include="LocalResources\es-ES.xaml">
       <SubType>Designer</SubType>
     </Resource>
+    <Resource Include="LocalResources\de-DE.xaml">
+      <SubType>Designer</SubType>
+    </Resource>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -70,7 +73,6 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="LocalResourcesManager.cs" />
     <Compile Include="MainViewModel.cs" />
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
@@ -108,9 +110,17 @@
     <EmbeddedResource Include="XMLFile1.xml" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Assets\Assets.csproj">
+      <Project>{0f23a7d4-7b81-4223-854c-f30f6c9ee435}</Project>
+      <Name>Assets</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Common\Common.csproj">
       <Project>{18a26f46-d7a8-47ab-9f4d-6819045d118d}</Project>
       <Name>Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\LocalizedControlsSample\LocalizedControlsSample.csproj">
+      <Project>{cb2c9e47-f2c3-440e-8c4c-bf41d004ce04}</Project>
+      <Name>LocalizedControlsSample</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

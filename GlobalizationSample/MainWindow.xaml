@@ -2,12 +2,20 @@
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:local="clr-namespace:GlobalizationSample"
-        Title="MainWindow" Height="350" Width="525">
+        xmlns:common="clr-namespace:Common;assembly=Common"
+        xmlns:controls="clr-namespace:LocalizedControlsSample;assembly=LocalizedControlsSample"
+        Title="MainWindow" Height="350" Width="525"
+        common:LocalResourcesManager.Path="LocalResources">
     <Window.DataContext>
         <local:MainViewModel></local:MainViewModel>
     </Window.DataContext>
-    <StackPanel>
-        <ComboBox ItemsSource="{Binding Languages}" SelectedValue="{Binding CurrentLanguage,UpdateSourceTrigger=PropertyChanged}"></ComboBox>
-        <TextBlock Text="{DynamicResource WelcomeMessage}"></TextBlock>
-    </StackPanel>
+    <Grid>
+        <ContentControl Content="{DynamicResource FlagImage}" Opacity="0.5"></ContentControl>
+
+        <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center">
+            <ComboBox ItemsSource="{Binding Languages}" SelectedValue="{Binding CurrentLanguage,UpdateSourceTrigger=PropertyChanged}"></ComboBox>
+            <TextBlock FontSize="40" FontWeight="Bold" Text="{DynamicResource WelcomeMessage}"></TextBlock>
+            <controls:TinyFlag></controls:TinyFlag>
+        </StackPanel>
+    </Grid>
 </Window>

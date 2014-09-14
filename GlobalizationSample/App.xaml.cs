@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Common;
+using System;
 using System.Collections.Generic;
 using System.Configuration;
 using System.Data;
@@ -15,7 +16,7 @@ namespace GlobalizationSample
     {
         public App()
         {
-            Startup += (_1, _2) => LocalResourcesManager.LoadLocalResources();
+            //null += (_1, _2) => LocalResourcesManager.RefreshLocalResources();
         }
     }
 }

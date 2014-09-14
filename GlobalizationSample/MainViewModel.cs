@@ -23,7 +23,7 @@ namespace GlobalizationSample
                 {
                     Thread.CurrentThread.CurrentUICulture = CultureInfo.GetCultureInfo(value);
 
-                    LocalResourcesManager.LoadLocalResources();
+                    LocalResourcesManager.RefreshLocalResources();
 
                     Notify();
                 }
