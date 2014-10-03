@@ -5,18 +5,18 @@
     <StackPanel>
         <TextBox AcceptsReturn="False"></TextBox>
         <TextBox AcceptsReturn="True"></TextBox>
-<Button x:Name="click" IsDefault="True" Click="Button_Click" Content="Click">
-    <Button.Style>
-        <Style TargetType="Button">
-            <Setter Property="FontWeight" Value="Light"></Setter>
-            <Style.Triggers>
-                <Trigger Property="IsDefaulted" Value="true">
-                    <Setter Property="FontWeight" Value="Bold" />
-                </Trigger>
-            </Style.Triggers>
-        </Style>
-    </Button.Style>
-</Button>
+        <Button x:Name="click" IsDefault="True" Click="Button_Click" Content="Click">
+            <Button.Style>
+                <Style TargetType="Button">
+                    <Setter Property="FontWeight" Value="Light"></Setter>
+                    <Style.Triggers>
+                        <Trigger Property="IsDefaulted" Value="true">
+                            <Setter Property="FontWeight" Value="Bold" />
+                        </Trigger>
+                    </Style.Triggers>
+                </Style>
+            </Button.Style>
+        </Button>
         <!--<TextBlock x:Name="text" Text="IsDefaulted">
             <TextBlock.Style>
                 <Style TargetType="TextBlock">

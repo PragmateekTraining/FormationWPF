@@ -1,0 +1,9 @@
+﻿<Window x:Class="DefaultButtonIssueSample.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="MainWindow" Height="350" Width="525">
+    <StackPanel DataContext="{Binding RelativeSource={RelativeSource AncestorType=Window}}">
+        <TextBox x:Name="input" Text="{Binding Text,Mode=OneWayToSource}"></TextBox>
+        <Button IsDefault="True" Click="Button_Click">Show Texts</Button>
+    </StackPanel>
+</Window>
