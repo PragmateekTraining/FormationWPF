@@ -1,6 +1,7 @@
 ﻿using Model;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -29,6 +30,12 @@ namespace DataGridSample
         private void DataGrid_AddingNewItem(object sender, AddingNewItemEventArgs e)
         {
             e.NewItem = new Movie { PosterURI = "/Assets;component/images/icons/none.png", ReleaseDate = DateTime.Today };
+        }
+
+        private void MoviesGrid_MoreInfoUri_Click(object sender, RoutedEventArgs e)
+        {
+            Hyperlink link = (Hyperlink)e.OriginalSource;
+            Process.Start(link.NavigateUri.AbsoluteUri);
         }
     }
 }

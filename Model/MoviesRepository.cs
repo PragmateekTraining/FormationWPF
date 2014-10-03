@@ -59,11 +59,46 @@ On July 1, 2000, Norris was presented the Golden Lifetime Achievement Award by t
 
         static MoviesRepository()
         {
-            Movie EnterTheDragon = new Movie { Title = "Enter The Dragon", PosterURI = "/Assets;component/MoviesDB/Posters/EnterTheDragon.jpg", ReleaseDate = new DateTime(1973, 07, 26), Actors = new[] { ChuckNorris } };
-            Movie ReturnOfTheDragon = new Movie { Title = "Return Of The Dragon", PosterURI = "/Assets;component/MoviesDB/Posters/ReturnOfTheDragon.jpg", ReleaseDate = new DateTime(1972, 12, 30), Actors = new[] { ChuckNorris } };
-            Movie GameOfDeath = new Movie { Title = "Game Of Death", PosterURI = "/Assets;component/MoviesDB/Posters/GameOfDeath.jpg", ReleaseDate = new DateTime(1978, 03, 23), Actors = new[] { ChuckNorris } };
-            Movie CodeOfSilence = new Movie { Title = "Code Of Silence", PosterURI = "/Assets;component/MoviesDB/Posters/CodeOfSilence.jpg", ReleaseDate = new DateTime(1985, 05, 03), Actors = new[] { ChuckNorris } };
-            Movie DeltaForce2 = new Movie { Title = "Delta Force 2", PosterURI = "/Assets;component/MoviesDB/Posters/DeltaForce2.jpg", ReleaseDate = new DateTime(1990, 08, 24), Actors = new[] { ChuckNorris } };
+            Movie EnterTheDragon = new Movie
+            {
+                Title = "Enter The Dragon",
+                PosterURI = "/Assets;component/MoviesDB/Posters/EnterTheDragon.jpg",
+                ReleaseDate = new DateTime(1973, 07, 26),
+                Actors = new[] { ChuckNorris },
+                MoreInfoURI = new Uri("http://en.wikipedia.org/wiki/Enter_the_Dragon")
+            };
+            Movie ReturnOfTheDragon = new Movie
+            {
+                Title = "Way Of The Dragon",
+                PosterURI = "/Assets;component/MoviesDB/Posters/ReturnOfTheDragon.jpg",
+                ReleaseDate = new DateTime(1972, 12, 30),
+                Actors = new[] { ChuckNorris },
+                MoreInfoURI = new Uri("http://en.wikipedia.org/wiki/Way_of_the_Dragon")
+            };
+            Movie GameOfDeath = new Movie
+            {
+                Title = "The Game Of Death",
+                PosterURI = "/Assets;component/MoviesDB/Posters/GameOfDeath.jpg",
+                ReleaseDate = new DateTime(1978, 03, 23),
+                Actors = new[] { ChuckNorris },
+                MoreInfoURI = new Uri("http://en.wikipedia.org/wiki/Game_of_Death")
+            };
+            Movie CodeOfSilence = new Movie
+            {
+                Title = "Code Of Silence",
+                PosterURI = "/Assets;component/MoviesDB/Posters/CodeOfSilence.jpg",
+                ReleaseDate = new DateTime(1985, 05, 03),
+                Actors = new[] { ChuckNorris },
+                MoreInfoURI = new Uri("http://en.wikipedia.org/wiki/Code_of_Silence_(film)") 
+            };
+            Movie DeltaForce2 = new Movie
+            {
+                Title = "Delta Force 2",
+                PosterURI = "/Assets;component/MoviesDB/Posters/DeltaForce2.jpg",
+                ReleaseDate = new DateTime(1990, 08, 24),
+                Actors = new[] { ChuckNorris },
+                MoreInfoURI = new Uri("http://en.wikipedia.org/wiki/Delta_Force_2:_The_Colombian_Connection") 
+            };
             Movie MissingInAction = new Movie { Title = "Missing In Action", PosterURI = "/Assets;component/MoviesDB/Posters/MissingInAction.jpg", Actors = new[] { ChuckNorris } };
             Movie SilentRage = new Movie { Title = "Silent Rage", PosterURI = "/Assets;component/MoviesDB/Posters/SilentRage.jpg", Actors = new[] { ChuckNorris } };
             Movie TheOctagon = new Movie { Title = "The Octagon", PosterURI = "/Assets;component/MoviesDB/Posters/TheOctagon.jpg", Actors = new[] { ChuckNorris } };

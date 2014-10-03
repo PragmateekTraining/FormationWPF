@@ -11,6 +11,7 @@ namespace Model
         public string Title { get; set; }
         public string PosterURI { get; set; }
         public DateTime ReleaseDate { get; set; }
+        public Uri MoreInfoURI { get; set; }
 
         public IList<Actor> Actors { get; set; }
 
