@@ -8,6 +8,7 @@
             <RowDefinition></RowDefinition>
             <RowDefinition></RowDefinition>
             <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
             <ColumnDefinition></ColumnDefinition>
@@ -19,5 +20,6 @@
         <TextBox x:Name="lastNameInput" Grid.Row="1" Grid.Column="1"></TextBox>
         <Label Content="_Date of Birth:" Target="{x:Reference dateOfBirthInput}" Grid.Row="2"></Label>
         <TextBox x:Name="dateOfBirthInput" Grid.Row="2" Grid.Column="1"></TextBox>
+        <Button Grid.Row="3" Grid.ColumnSpan="2" Click="Button_Click">_OK</Button>
     </Grid>
 </Window>
